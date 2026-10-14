@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css/book.css">
+    <title>Book Now</title>
+</head>
+
+<body>
+
+    <div class="booking-overlay" id="bookingOverlay">
+        <div class="booking-nav-bar">
+            <button class="booking-nav-btn" onclick="window.location.href='index.html'">‹</button>
+            <button class="booking-nav-btn" onclick="window.href='#'"
+                aria-label="Return home"></button>
+        </div>
+
+        <div class="booking-layout">
+            <div class="services-column">
+                <div class="booking-breadcrumbs">Ecologist Hairdresser › Services</div>
+                <h2 class="booking-title">Select services</h2>
+
+                <!-- Category Filter Pills: 'All Services' is active by default -->
+                <div class="filter-pills-wrap" id="categoryPills">
+                    <button class="pill-btn active" data-category="all">All Services</button>
+                    <button class="pill-btn" data-category="haircuts">Haircuts</button>
+                    <button class="pill-btn" data-category="treatments">Hair &amp; Scalp Treatments</button>
+                    <!-- <button class="pill-btn" data-category="colour">Colour</button> -->
+                </div>
+
+                <!-- Main Container where categorized sections render -->
+                <div id="serviceSectionsContainer"></div>
+            </div>
+
+            <!-- Sticky Checkout Aside -->
+            <aside class="checkout-panel">
+                <div class="salon-card-header">
+                    <img class="salon-avatar"
+                        src="https://images.plash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=120&q=80"
+                        alt="Ecologist Hairdresser">
+                    <div class="salon-meta">
+                        <h3>Ecologist Hairdresser</h3>
+                        <div class="salon-rating">
+                            <span class="star-badge">★</span> 4.9 (1.2k reviews)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-content-wrapper" id="cartItemsList">
+                    <div class="empty-cart-message">No services selected yet</div>
+                </div>
+
+                <div class="cart-total-bar">
+                    <span>Total</span>
+                    <span id="cartTotalPrice">0.00kr</span>
+                </div>
+
+                <button class="checkout-submit-btn" id="continueBtn" disabled>Continue</button>
+            </aside>
+        </div>
+
+        <!-- <div class="recommendations-box">
+            <div class="rec-header-title">Try something else</div>[cite: 5]
+            <div class="rec-card-list">
+                <div class="rec-card-item">
+                    <div class="rec-card-text">
+                        <h5>Book a specific therapist</h5>
+                        <p>Find appointments with your preferred specialist</p>
+                    </div>
+                    <span>›</span>
+                </div>
+                <div class="rec-card-item">
+                    <div class="rec-card-text">
+                        <h5>Gift cards</h5>
+                        <p>Treat someone to organic hair &amp; wellbeing experiences</p>
+                    </div>
+                    <span>›</span>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="scripts.js/book.js"></script>
+</body>
+
+</html>
