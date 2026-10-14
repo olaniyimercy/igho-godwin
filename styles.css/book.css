@@ -396,166 +396,166 @@
     }
 }
 
+/* ================= MOBILE RESPONSIVE FIXES (LANDING PAGE) ================= */
+@media (max-width: 768px) {
+  /* 1. Prevent viewport horizontal shifting and overflow */
+  html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 
-/* ================= MOBILE-FIRST RESPONSIVE FIXES ================= */
+  /* 2. Top Header & Logo Area */
+  header {
+    padding: 16px 20px 12px 20px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-/* 1. Reset Root & Safe Area Padding for notch devices (iPhone X -> 16) */
-.booking-overlay {
-  box-sizing: border-box;
-  padding-bottom: env(safe-area-inset-bottom, 20px);
-  -webkit-overflow-scrolling: touch;
-}
-
-/* 2. Responsive Navigation Bar */
-.booking-nav-bar {
-  padding: 12px 18px;
-  position: sticky;
-  top: 0;
-  background: var(--booking-bg);
-  z-index: 100;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-/* 3. Adaptive Grid -> Single Column Layout */
-@media (max-width: 960px) {
-  .booking-layout {
+  .nav-primary {
     display: flex;
     flex-direction: column;
-    padding: 16px 16px 120px 16px; /* 120px bottom clearance for floating bar */
-    gap: 28px;
+    align-items: flex-start;
+    gap: 16px;
     width: 100%;
-    box-sizing: border-box;
+    padding-bottom: 14px !important;
   }
 
-  .booking-title {
-    font-size: 24px;
-    margin-bottom: 16px;
+  .logo {
+    font-size: 22px !important;
+    line-height: 1.15;
+    letter-spacing: 0.12em;
   }
 
-  /* Smooth scrollable pills on small viewports */
-  .filter-pills-wrap {
-    margin: 0 -16px 24px -16px;
-    padding: 0 16px 8px 16px;
+  /* Horizontal touch-scrollable menu so no items get cut off */
+  .menu-links {
+    width: 100%;
     display: flex;
-    gap: 8px;
+    gap: 18px !important;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
   }
-
-  .pill-btn {
-    font-size: 12px;
-    padding: 8px 15px;
-    flex-shrink: 0;
-  }
-
-  /* Banners sizing on small screens */
-  .category-intro-banner {
-    padding: 18px 18px;
-    margin-bottom: 18px;
-  }
-
-  .category-intro-banner h3 {
-    font-size: 18px;
-  }
-
-  .category-intro-banner .tagline {
-    font-size: 12px;
-  }
-
-  .category-intro-banner p {
-    font-size: 12.5px;
-  }
-
-  /* Service Card Optimization */
-  .service-card {
-    padding: 16px;
-    margin-bottom: 14px;
-  }
-
-  .service-card-info h4 {
-    font-size: 15px;
-  }
-
-  .service-card-desc {
-    font-size: 12.5px;
-    line-height: 1.45;
-  }
-
-  .service-card-bottom {
-    margin-top: 14px;
-    padding-top: 12px;
-  }
-
-  .service-card-price {
-    font-size: 15px;
-  }
-
-  /* 4. Transform Checkout Panel to an App-Style Bottom Floating Bar on Mobile */
-  .checkout-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.12);
-    padding: 16px 20px calc(16px + env(safe-area-inset-bottom, 0px)) 20px;
-    z-index: 999;
-    background: #ffffff;
-    border-top: 1px solid var(--booking-border);
-  }
-
-  /* Hide salon avatar thumbnail on mobile bottom sheet to save vertical space */
-  .salon-card-header {
+  .menu-links::-webkit-scrollbar {
     display: none;
   }
 
-  /* Compact Collapsible Cart View for Mobile */
-  .cart-content-wrapper {
-    max-height: 140px;
-    overflow-y: auto;
-    min-height: auto;
-    padding: 0 0 10px 0;
+  .menu-links a {
+    white-space: nowrap;
+    font-size: 11px !important;
+    letter-spacing: 0.08em;
   }
 
-  .empty-cart-message {
-    display: none; /* Keep bottom bar sleek when empty */
+  /* Sub-bar / Subtitle & Social Links */
+  .sub-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    font-size: 9.5px !important;
+    line-height: 1.5;
   }
 
-  .cart-total-bar {
-    padding: 8px 0 12px 0;
-    font-size: 14px;
+  .social-top {
+    display: flex;
+    gap: 16px !important;
+    width: 100%;
   }
 
-  .checkout-submit-btn {
-    padding: 13px;
-    font-size: 13.5px;
+  /* 3. Hero Section: Full width edge-to-edge, no side gaps */
+  .hero-banner {
+    width: 100% !important;
+    min-height: 75vh !important;
+    margin: 0 0 32px 0 !important;
+    border-radius: 0 !important;
+    position: relative;
+    box-sizing: border-box;
   }
 
-  /* 5. Recommendations at the bottom */
-  .recommendations-box {
-    padding: 0 16px 40px 16px;
-    margin-top: 10px;
+  .hero-banner__bg {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
   }
 
-  .rec-card-list {
-    max-width: 100%;
+  .hero-banner__content {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 24px !important;
+    margin-top: 25vh !important;
+    box-sizing: border-box;
   }
-}
 
-/* 6. Ultra-compact devices (screens below 360px wide, e.g. iPhone SE 1st gen) */
-@media (max-width: 360px) {
-  .booking-title {
-    font-size: 21px;
+  .hero-banner__text {
+    font-size: 19px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 22px !important;
   }
-  
-  .service-card-price {
-    font-size: 14px;
+
+  .hero-banner__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+    gap: 10px !important;
   }
-  
-  .checkout-submit-btn {
-    font-size: 12.5px;
+
+  .hero-banner__btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px !important;
+    box-sizing: border-box;
+  }
+
+  /* 4. About / Info Section (Below Hero) */
+  .info-section {
+    padding: 48px 20px !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .info-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 36px !important;
+    width: 100% !important;
+  }
+
+  .info-headline {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 24px !important;
+  }
+
+  .info-body-copy {
+    font-size: 13.5px !important;
+    line-height: 1.65 !important;
+    max-width: 100% !important;
+  }
+
+  .info-sidebar {
+    width: 100% !important;
+    padding-top: 0 !important;
+  }
+
+  .hours-table {
+    width: 100% !important;
+  }
+
+  .info-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px !important;
+  }
+
+  .info-btn {
+    width: 100%;
+    box-sizing: border-box;
   }
 }
