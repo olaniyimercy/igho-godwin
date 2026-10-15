@@ -244,3 +244,62 @@ pills.forEach((pill) => {
 // Initial Load: Renders all categories together with their respective headers
 renderView();
 renderCart();
+
+// Helper to read query parameters from the URL
+function getUrlCategory() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("category");
+}
+
+// Handle category activation & smooth scrolling
+function handleUrlRouting() {
+  const targetCategory = getUrlCategory();
+  if (!targetCategory) {
+    // Default to "all" or your preferred initial view
+    selectedCategory = "all";
+    renderView();
+    renderCart();
+    return;
+  }
+
+  // Check if a pill matches the URL parameter
+  const targetPill = document.querySelector(
+    `.pill-btn[data-category="${targetCategory}"]`,
+  );
+  if (targetPill) {
+    // Update active pill state
+    pills.forEach((p) => p.classList.remove("active"));
+    targetPill.classList.add("active");
+    selectedCategory = targetCategory;
+
+    // Re-render only that category
+    renderView();
+    renderCart();
+
+    // Smooth scroll to the content
+    setTimeout(() => {
+      const targetElement = document.getElementById("serviceSectionsContainer");
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
+  } else {
+    renderView();
+    renderCart();
+  }
+}
+
+// Run on page load
+handleUrlRouting();
+
+const targetCategory = getUrlCategory();
+if (targetCategory) {
+  setTimeout(() => {
+    const section = document.getElementById(
+      `category-section-${targetCategory}`,
+    );
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, 150);
+}

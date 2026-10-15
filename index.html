@@ -14,21 +14,27 @@
 </head>
 
 <body>
-
-    <!-- <div class="top-banner">
-        Built on WIX Harmony
-    </div> -->
-
     <header>
         <div class="nav-primary">
             <h1 class="logo"><a href="#">Igho Godwin</a></h1>
-            <nav class="menu-links">
+        
+            <!-- Mobile Hamburger Button -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        
+            <nav class="menu-links" id="menuLinks">
                 <a href="#" class="active">Salon</a>
-                <a href="#">Haircuts</a>
-                <a href="#">Treatments</a>
+                <a href="./book.html?category=haircuts">Haircuts</a>
+                <a href="./book.html?category=treatments">Treatments</a>
                 <a href="#">Journal</a>
             </nav>
         </div>
+        
+        <!-- Dim Backdrop on Mobile -->
+        <div class="nav-backdrop" id="navBackdrop"></div>
 
         <div class="sub-bar">
             <div>Ecologist Hairdresser</div>
@@ -49,10 +55,10 @@
         <div class="hero-banner__content">
             <p class="hero-banner__text">
                 Gothenburg’s original destination for organic,
-                natural, sustainable hair & beauty
+                natural, sustainable hair & scalp care
             </p>
             <div class="hero-banner__buttons">
-                <a href="#book" class="hero-banner__btn">Book Now</a>
+                <a href="./book.html" class="hero-banner__btn">Book Now</a>
                 <a href="#services" class="hero-banner__btn">Services</a>
             </div>
         </div>
@@ -154,6 +160,8 @@
             &copy; 2026 by Igho Godwin.
         </div>
     </footer>
+
+    <script src="scripts.js/index.js"></script>
 </body>
 
 </html>
