@@ -1,0 +1,646 @@
+<!-- ================= SERVICES PAGE MAIN CONTENT ================= -->
+<style>
+    .services-main {
+        background-color: #f7f6f4;
+        color: #1a1a1a;
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        padding: 60px 48px 120px 48px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .services-wrapper {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .services-page-title {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-size: 46px;
+        font-weight: 300;
+        letter-spacing: -0.01em;
+        margin-bottom: 50px;
+        color: #1a1a1a;
+    }
+
+    .services-layout {
+        display: grid;
+        grid-template-columns: 1.65fr 1fr;
+        gap: 80px;
+        align-items: start;
+    }
+
+    /* Left Column: Menu Tables */
+    .service-section-block {
+        margin-bottom: 54px;
+    }
+
+    .service-block-heading {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        margin-bottom: 4px;
+    }
+
+    .service-block-subheading {
+        font-size: 12.5px;
+        color: #555555;
+        margin-bottom: 20px;
+    }
+
+    .service-table-subgroup-title {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 28px 0 10px 0;
+    }
+
+    .service-pricing-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+    }
+
+    .service-pricing-table tr {
+        border-bottom: 1px solid #e0deda;
+    }
+
+    .service-pricing-table td {
+        padding: 10px 0;
+        vertical-align: top;
+    }
+
+    .service-pricing-table td:last-child {
+        text-align: right;
+        white-space: nowrap;
+        padding-left: 20px;
+    }
+
+    .service-block-footnote {
+        font-size: 12px;
+        color: #555555;
+        margin-top: 14px;
+        line-height: 1.5;
+    }
+
+    .service-block-footnote a {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    /* Right Column: Policies, Information & Booking Aside */
+    .services-aside {
+        padding-top: 10px;
+    }
+
+    .aside-intro-text {
+        font-size: 13px;
+        line-height: 1.6;
+        color: #444444;
+        margin-bottom: 24px;
+    }
+
+    .aside-action-buttons {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 44px;
+    }
+
+    .aside-btn {
+        display: inline-block;
+        padding: 11px 24px;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .aside-btn-solid {
+        background-color: #242a30;
+        color: #ffffff;
+        border: 1px solid #242a30;
+    }
+
+    .aside-btn-solid:hover {
+        background-color: #000000;
+        border-color: #000000;
+    }
+
+    .aside-btn-outline {
+        background-color: transparent;
+        color: #1a1a1a;
+        border: 1px solid #1a1a1a;
+    }
+
+    .aside-btn-outline:hover {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+    .policy-article {
+        margin-bottom: 34px;
+    }
+
+    .policy-article h4 {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+        color: #1a1a1a;
+    }
+
+    .policy-article p {
+        font-size: 12.5px;
+        line-height: 1.65;
+        color: #444444;
+        margin-bottom: 12px;
+    }
+
+    .policy-article p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Floating WhatsApp widget pill */
+    .floating-whatsapp {
+        position: fixed;
+        right: 32px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #25d366;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+        z-index: 99;
+    }
+
+    @media (max-width: 960px) {
+        .services-main {
+            padding: 40px 20px 80px 20px;
+        }
+
+        .services-page-title {
+            font-size: 34px;
+            margin-bottom: 32px;
+        }
+
+        .services-layout {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .floating-whatsapp {
+            right: 16px;
+            bottom: 24px;
+            top: auto;
+            transform: none;
+        }
+    }
+</style>
+
+<main class="services-main">
+    <div class="services-wrapper">
+        <h1 class="services-page-title">Services</h1>[cite: 8]
+
+        <div class="services-layout">
+            <!-- ================= LEFT COLUMN: PRICE LISTS ================= -->
+            <div class="services-content-column">
+
+                <!-- Section: Cuts and Styling -->
+                <section class="service-section-block">
+                    <h2 class="service-block-heading">Cuts and Styling</h2>[cite: 8]
+                    <p class="service-block-subheading">Wash &amp; Blow Dry, Cut and styling</p>[cite: 8]
+
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Stylist</td>[cite: 8]
+                                <td>£68</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Senior Stylist</td>[cite: 8]
+                                <td>£78</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Director</td>[cite: 8]
+                                <td>£86</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Stylist &amp; Restyle</td>[cite: 8]
+                                <td>£78</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Wash &amp; Blow Dry</td>[cite: 8]
+                                <td>from £45</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Occasion Styling</td>[cite: 8]
+                                <td>Price upon request</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Fringe Trim</td>[cite: 8]
+                                <td>£15</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section: Colouring -->
+                <section class="service-section-block">
+                    <h2 class="service-block-heading">Colouring</h2>[cite: 8]
+                    <p class="service-block-subheading">All colour services require a patch test and consultation at
+                        least 48 hours prior to service</p>[cite: 8]
+
+                    <!-- Sub-table: Highlights -->
+                    <div class="service-table-subgroup-title">Highlights / Foilage</div>[cite: 8]
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Stylist</td>[cite: 8]
+                                <td>£125</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Senior Specialist</td>[cite: 8]
+                                <td>£145</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>T-Bar</td>[cite: 8]
+                                <td>£85</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Half Head</td>[cite: 8]
+                                <td>£130</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Full Head</td>[cite: 8]
+                                <td>£175</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Senior Specialist</td>[cite: 8]
+                                <td>£155</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>T-Bar</td>[cite: 8]
+                                <td>£95</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Half Head</td>[cite: 8]
+                                <td>£145</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Full Head</td>[cite: 8]
+                                <td>£190</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Director</td>[cite: 8]
+                                <td>£170</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>T-Bar</td>[cite: 8]
+                                <td>£105</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Half Head</td>[cite: 8]
+                                <td>£160</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Full Head</td>[cite: 8]
+                                <td>£210</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Specialist</td>[cite: 8]
+                                <td>£185</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>T-Bar</td>[cite: 8]
+                                <td>£115</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Half Head</td>[cite: 8]
+                                <td>£175</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Full Head</td>[cite: 8]
+                                <td>£230</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Toner (with colour service)</td>[cite: 8]
+                                <td>£25-£35</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Sub-table: Tints -->
+                    <div class="service-table-subgroup-title">Tints</div>[cite: 8]
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Stylist</td>[cite: 8]
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Root Regrowth</td>[cite: 8]
+                                <td>£68</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over</td>[cite: 8]
+                                <td>£85</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over &amp; Regrowth</td>[cite: 8]
+                                <td>£95</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Senior Specialist</td>[cite: 8]
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Root Regrowth</td>[cite: 8]
+                                <td>£78</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over</td>[cite: 8]
+                                <td>£95</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over &amp; Regrowth</td>[cite: 8]
+                                <td>£105</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Director</td>[cite: 8]
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Root Regrowth</td>[cite: 8]
+                                <td>£85</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over</td>[cite: 8]
+                                <td>£105</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over &amp; Regrowth</td>[cite: 8]
+                                <td>£115</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Specialist</td>[cite: 8]
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Root Regrowth</td>[cite: 8]
+                                <td>£92</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over</td>[cite: 8]
+                                <td>£115</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>All Over &amp; Regrowth</td>[cite: 8]
+                                <td>£125</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Sub-table: Bleach & Tone -->
+                    <div class="service-table-subgroup-title">Bleach &amp; Tone</div>[cite: 8]
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Stylist - Regrowth (6-8 wks)</td>[cite: 8]
+                                <td>from £110</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Senior Specialist - Regrowth</td>[cite: 8]
+                                <td>from £120</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Director - Regrowth</td>[cite: 8]
+                                <td>from £130</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Creative Specialist - Regrowth</td>[cite: 8]
+                                <td>from £140</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Virgin Application</td>[cite: 8]
+                                <td>Price upon consultation</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Colour Correction</td>[cite: 8]
+                                <td>Price upon consultation</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Section: Treatments -->
+                <section class="service-section-block">
+                    <h2 class="service-block-heading">Treatments</h2>[cite: 8]
+                    <p class="service-block-subheading">Hair &amp; Scalp Rituals</p>[cite: 8]
+
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Botanical Hair Treatment with Service</td>[cite: 8]
+                                <td>£25</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Sustainable Express Conditioning Ritual</td>[cite: 8]
+                                <td>£35</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Reconstruction Power Conditioning Treatment</td>[cite: 8]
+                                <td>from £45</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Holistic Scalp Detox &amp; Hair Conditioning Ritual</td>[cite: 8]
+                                <td>£55</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Complete Scalp Treatment and Scalp Rebalance</td>[cite: 8]
+                                <td>£65</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Olaplex Stand-Alone Treatment (with blow-dry)</td>[cite: 8]
+                                <td>Price upon consultation</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="service-block-footnote">Hair &amp; scalp treatments that require blow-drying must book a
+                        finishing service.</p>[cite: 8]
+                </section>
+
+                <!-- Section: Therapy Room -->
+                <section class="service-section-block">
+                    <h2 class="service-block-heading">Therapy Room</h2>[cite: 8]
+                    <p class="service-block-subheading">Holistic Therapies</p>[cite: 8]
+
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Organic Facial with Reflexology Scalp Focus</td>[cite: 8]
+                                <td>£85</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Reiki Energy Balance Session</td>[cite: 8]
+                                <td>£75</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Acupuncture Initial Consultation &amp; Care</td>[cite: 8]
+                                <td>£90</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Therapeutic Back Massage &amp; Scalp Treatment</td>[cite: 8]
+                                <td>£80</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Craniosacral Body Therapy</td>[cite: 8]
+                                <td>£75-£95</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Custom Natural Body Ritual / Consultation</td>[cite: 8]
+                                <td>from £85</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="service-block-footnote">For more information, please see our <a
+                            href="#therapy-room">Therapy Room page</a>.</p>[cite: 8]
+                </section>
+
+                <!-- Section: Wellbeing Treatments -->
+                <section class="service-section-block">
+                    <h2 class="service-block-heading">Wellbeing Treatments</h2>[cite: 8]
+                    <p class="service-block-subheading">Natural Body Treatments &amp; Rituals</p>[cite: 8]
+
+                    <table class="service-pricing-table">
+                        <tbody>
+                            <tr>
+                                <td>Deep Breathing Therapy</td>[cite: 8]
+                                <td>£50</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Full Reflexology Foot &amp; Hand Session</td>[cite: 8]
+                                <td>£75</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Sound Bath &amp; Meditation Treatment</td>[cite: 8]
+                                <td>£60</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Ayurvedic Head &amp; Scalp Oil Massage</td>[cite: 8]
+                                <td>£80</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Nourishing Cleansing Detoxifying Clay Pack</td>[cite: 8]
+                                <td>£85</td>[cite: 8]
+                            </tr>
+                            <tr>
+                                <td>Energy Alignment Treatment</td>[cite: 8]
+                                <td>£70-£90</td>[cite: 8]
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="service-block-footnote">For more information, please visit our <a
+                            href="#wellbeing">Wellbeing page</a>.</p>[cite: 8]
+                </section>
+
+            </div>
+
+            <!-- ================= RIGHT COLUMN: POLICIES & INFO ================= -->
+            <aside class="services-aside">
+                <p class="aside-intro-text">
+                    To book an appointment, please use our online booking system below or get in touch directly if you
+                    need assistance tailoring your service.
+                </p>
+
+                <div class="aside-action-buttons">
+                    <a href="#book" class="aside-btn aside-btn-solid">Book Now</a>[cite: 8]
+                    <a href="#services" class="aside-btn aside-btn-outline">Services</a>
+                </div>
+
+                <article class="policy-article">
+                    <h4>Patch Testing</h4>[cite: 8]
+                    <p>
+                        All hair colouring services require a skin allergy test at least 48 hours prior to your
+                        appointment.[cite: 8] Patch tests must be repeated if you have not had a colour service with us
+                        in the last 6 months or have had changes to your health.
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Booking &amp; Deposits</h4>[cite: 8]
+                    <p>
+                        A 50% deposit is required for all appointments to confirm and secure your booking.[cite: 8]
+                        Deposits are deductible from your bill on the day of your service.
+                    </p>
+                    <p>
+                        We require at least 48 hours notice to reschedule or cancel an appointment without charge.[cite:
+                        8] Any cancellation made within 48 hours will incur forfeiture of the deposit.[cite: 8]
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Consultations</h4>[cite: 8]
+                    <p>
+                        If you are looking to make a significant change, require colour correction, or are unsure what
+                        to book, we recommend a 15-minute consultation with our stylists before your session.
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Sustainability</h4>[cite: 8]
+                    <p>
+                        We partner with Green Salon Collective to recycle and compost almost all salon waste, including
+                        hair, foil, chemicals, and plastics.[cite: 8] A small sustainability contribution of £2 is added
+                        to each service bill.
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Pricing &amp; Levels</h4>[cite: 8]
+                    <p>
+                        Prices vary depending on the level of experience of your stylist.[cite: 8] All prices listed are
+                        starting estimates and may vary according to the length, thickness, and time required for your
+                        hair.[cite: 8]
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Quiet Appointments</h4>[cite: 8]
+                    <p>
+                        If you prefer a silent appointment without chat during your service to relax, work, or unwind,
+                        please mention this in your booking notes.
+                    </p>
+                </article>
+
+                <article class="policy-article">
+                    <h4>Therapy Room Access</h4>[cite: 8]
+                    <p>
+                        Please note that our treatment and therapy room is situated on a mezzanine floor accessible via
+                        stairs. Please reach out beforehand if you have mobility requirements.
+                    </p>
+                </article>
+
+                <div style="margin-top: 36px;">
+                    <a href="#book" class="aside-btn aside-btn-solid">Book Now</a>[cite: 8]
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Widget Button -->
+    <!-- <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="floating-whatsapp"
+        aria-label="Chat on WhatsApp">
+        <span>WhatsApp Us</span>[cite: 8]
+    </a> -->
+</main>
+<!-- ================= END SERVICES PAGE MAIN CONTENT ================= -->
