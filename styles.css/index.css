@@ -134,6 +134,13 @@ a:hover {
         gap: 12px;
     }
 
+    .info-actions {
+        flex-direction: column;
+        width: 100%;
+        /* max-width: 200px; */
+        gap: 12px;
+    }
+
     .hero-banner__btn {
         text-align: center;
     }
@@ -591,6 +598,7 @@ footer {
     background-color: transparent;
     color: #1a1a1a;
     border: 1px solid #1a1a1a;
+    width: 100%;
 }
 
 .info-btn-outline:hover {
