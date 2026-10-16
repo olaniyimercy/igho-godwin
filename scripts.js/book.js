@@ -89,7 +89,7 @@ const salonServices = [
   },
   {
     id: "srv_Protein_Strengthening_Treatment",
-    name: "Hydration & Conditioning Treatment",
+    name: "Protein & Strengthening Treatment",
     duration: "60 mins",
     price: 999,
     description:

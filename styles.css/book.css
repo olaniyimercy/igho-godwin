@@ -47,7 +47,7 @@
     justify-content: center;
     padding: 6px;
 }
-/* 
+
 .booking-layout {
     max-width: 1200px;
     width: 100%;
@@ -57,7 +57,7 @@
     grid-template-columns: 1fr 360px;
     gap: 48px;
     align-items: start;
-} */
+}
 
 .booking-breadcrumbs {
     font-size: 13px;
@@ -400,6 +400,5 @@
 @media (max-width: 900px) {
     .booking-layout {
         grid-template-columns: 1fr;
-        padding: 0 20px;
     }
 }
