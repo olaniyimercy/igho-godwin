@@ -1158,13 +1158,16 @@ header.scrolled,
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 24px;
   }
+ 
+  
 }
 
 @media (max-width: 600px) {
-  .site-footer {
-    padding: var(--mobile-padding);
-  }
-
+ 
+    .site-footer {
+        padding: var(--mobile-padding);
+      }
+      
   .footer-links-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 16px;
