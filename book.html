@@ -5,44 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css/book.css">
-    <link rel="stylesheet" href="styles.css/index.css">
     <title>Book Now</title>
 </head>
 
 <body>
-    <header>
-        <div class="nav-primary">
-            <h1 class="logo"><a href="#">Igho Godwin</a></h1>
 
-            <!-- Mobile Hamburger Button -->
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="menu-links" id="menuLinks">
-                <a href="./index.html">Salon</a>
-                <a href="./book.html?category=haircuts">Haircuts</a>
-                <a href="./book.html?category=treatments">Treatments</a>
-                <a href="#">Journal</a>
-            </nav>
-        </div>
-
-        <!-- Dim Backdrop on Mobile -->
-        <div class="nav-backdrop" id="navBackdrop"></div>
-
-        <div class="sub-bar">
-            <div>Hair &amp; Scalp wellness specialist</div>
-            <div class="social-top">
-                <a href="./book.html">Book Now</a>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-overlay" id="bookingOverlay">
         <div class="booking-nav-bar">
             <button class="booking-nav-btn" onclick="window.location.href='index.html'"><svg
                     xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 512 512">
@@ -53,9 +21,9 @@
                         d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192Z" />
                 </svg></button>
             <button class="booking-nav-btn" onclick="window.href='#'" aria-label="Return home"></button>
-        </div> -->
+        </div>
 
-    <div class="booking-layout">
+        <div class="booking-layout">
         <div class="services-column">
             <h2 class="booking-title">Select services</h2>
             <div class="booking-breadcrumbs">Hair &amp; Scalp wellness specialist / Services</div>
@@ -65,7 +33,6 @@
                 <button class="pill-btn active" data-category="all">All Services</button>
                 <button class="pill-btn" data-category="haircuts">Haircuts</button>
                 <button class="pill-btn" data-category="treatments">Hair &amp; Scalp Treatments</button>
-                <button class="pill-btn" data-category="colour">Colour</button>
             </div>
 
             <!-- Main Container where categorized sections render -->
@@ -99,25 +66,6 @@
         </aside>
     </div>
 
-    <!-- <div class="recommendations-box">
-            <div class="rec-header-title">Try something else</div>[cite: 5]
-            <div class="rec-card-list">
-                <div class="rec-card-item">
-                    <div class="rec-card-text">
-                        <h5>Book a specific therapist</h5>
-                        <p>Find appointments with your preferred specialist</p>
-                    </div>
-                    <span>›</span>
-                </div>
-                <div class="rec-card-item">
-                    <div class="rec-card-text">
-                        <h5>Gift cards</h5>
-                        <p>Treat someone to organic hair &amp; wellbeing experiences</p>
-                    </div>
-                    <span>›</span>
-                </div>
-            </div>
-        </div> -->
     </div>
     <script src="scripts.js/book.js"></script>
 </body>

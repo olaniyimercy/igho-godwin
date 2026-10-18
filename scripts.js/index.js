@@ -1,42 +1,42 @@
 (function () {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const menuLinks = document.getElementById('menuLinks');
-    const navBackdrop = document.getElementById('navBackdrop');
-    const links = menuLinks.querySelectorAll('a');
+  const hamburgerBtn = document.getElementById("hamburgerBtn");
+  const menuLinks = document.getElementById("menuLinks");
+  const navBackdrop = document.getElementById("navBackdrop");
+  const links = menuLinks.querySelectorAll("a");
 
-    function toggleMenu() {
-      const isOpen = menuLinks.classList.toggle('is-open');
-      hamburgerBtn.classList.toggle('is-active', isOpen);
-      navBackdrop.classList.toggle('is-open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    }
+  function toggleMenu() {
+    const isOpen = menuLinks.classList.toggle("is-open");
+    hamburgerBtn.classList.toggle("is-active", isOpen);
+    navBackdrop.classList.toggle("is-open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
 
-    function closeMenu() {
-      menuLinks.classList.remove('is-open');
-      hamburgerBtn.classList.remove('is-active');
-      navBackdrop.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
+  function closeMenu() {
+    menuLinks.classList.remove("is-open");
+    hamburgerBtn.classList.remove("is-active");
+    navBackdrop.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
 
-    hamburgerBtn.addEventListener('click', toggleMenu);
-    navBackdrop.addEventListener('click', closeMenu);
+  hamburgerBtn.addEventListener("click", toggleMenu);
+  navBackdrop.addEventListener("click", closeMenu);
 
-    // Auto-close when clicking any link
-    links.forEach(link => link.addEventListener('click', closeMenu));
-  })();
+  // Auto-close when clicking any link
+  links.forEach((link) => link.addEventListener("click", closeMenu));
+})();
 
-  // Optional: adds the .scrolled class only after the user starts scrolling down
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header') || document.querySelector('.site-header');
+// Optional: adds the .scrolled class only after the user starts scrolling down
+window.addEventListener("scroll", () => {
+  const header =
+    document.querySelector("header") || document.querySelector(".site-header");
   if (header) {
     if (window.scrollY > 10) {
-      header.classList.add('scrolled');
+      header.classList.add("scrolled");
     } else {
-      header.classList.remove('scrolled');
+      header.classList.remove("scrolled");
     }
   }
 });
-
 
 // INTERACTIVE CAROUSEL SCRIPT
 
@@ -54,7 +54,7 @@ window.addEventListener('scroll', () => {
     },
     {
       quote:
-        "Fantastic hairdresser! Uses organic and vegan products without unnecessary chemicals. Both service and coloring/cutting were beyond all expectations and the absolute best I've had in Gothenburg.",
+        "Fantastic hairdresser! Uses organic and vegan products without unnecessary chemicals. Both service and treatment/cutting were beyond all expectations and the absolute best I've had in Gothenburg.",
       author: "— Linnea Savik",
     },
     {
@@ -159,50 +159,50 @@ window.addEventListener('scroll', () => {
   });
 })();
 
-// SMOOTH INFINITE AUTO-SLIDE SCRIPT 
+// SMOOTH INFINITE AUTO-SLIDE SCRIPT
 
-        (function () {
-            const track = document.getElementById('salonMarqueeTrack');
-            const viewport = document.getElementById('salonMarqueeViewport');
-            if (!track || !viewport) return;
+(function () {
+  const track = document.getElementById("salonMarqueeTrack");
+  const viewport = document.getElementById("salonMarqueeViewport");
+  if (!track || !viewport) return;
 
-            let position = 0;
-            const speed = 0.85; // Speed in pixels per frame (adjust up or down as desired)
-            let isPaused = false;
-            let animId = null;
+  let position = 0;
+  const speed = 0.85; // Speed in pixels per frame (adjust up or down as desired)
+  let isPaused = false;
+  let animId = null;
 
-            function step() {
-                if (!isPaused) {
-                    position -= speed;
+  function step() {
+    if (!isPaused) {
+      position -= speed;
 
-                    // Loop seamlessly once the first half of slides have scrolled out
-                    const halfWidth = track.scrollWidth / 2;
-                    if (Math.abs(position) >= halfWidth) {
-                        position = 0;
-                    }
+      // Loop seamlessly once the first half of slides have scrolled out
+      const halfWidth = track.scrollWidth / 2;
+      if (Math.abs(position) >= halfWidth) {
+        position = 0;
+      }
 
-                    track.style.transform = `translateX(${position}px)`;
-                }
-                animId = requestAnimationFrame(step);
-            }
+      track.style.transform = `translateX(${position}px)`;
+    }
+    animId = requestAnimationFrame(step);
+  }
 
-            // Pause animation when the user interacts or hovers
-            function pause() {
-                isPaused = true;
-            }
+  // Pause animation when the user interacts or hovers
+  function pause() {
+    isPaused = true;
+  }
 
-            function resume() {
-                isPaused = false;
-            }
+  function resume() {
+    isPaused = false;
+  }
 
-            // Desktop hover events
-            viewport.addEventListener('mouseenter', pause);
-            viewport.addEventListener('mouseleave', resume);
+  // Desktop hover events
+  viewport.addEventListener("mouseenter", pause);
+  viewport.addEventListener("mouseleave", resume);
 
-            // Mobile touch events
-            viewport.addEventListener('touchstart', pause, { passive: true });
-            viewport.addEventListener('touchend', resume, { passive: true });
+  // Mobile touch events
+  viewport.addEventListener("touchstart", pause, { passive: true });
+  viewport.addEventListener("touchend", resume, { passive: true });
 
-            // Start auto-slide loop
-            animId = requestAnimationFrame(step);
-        })();
+  // Start auto-slide loop
+  animId = requestAnimationFrame(step);
+})();

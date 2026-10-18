@@ -23,13 +23,6 @@ const categoryDefinitions = [
         </div>
       `,
   },
-  // {
-  //   id: "colour",
-  //   title: "Colour",
-  //   headerHtml: `
-  //       <h3 class="default-category-header">Colour Services</h3>
-  //     `,
-  // },
 ];
 
 // 2. Service Items Database
@@ -119,7 +112,7 @@ const continueBtn = document.getElementById("continueBtn");
 const pills = document.querySelectorAll(".pill-btn");
 
 function formatPrice(val) {
-  return val === 0 ? "Free" : val.toFixed(2) + "kr";
+  return val === 0 ? "Free" : val + "kr";
 }
 
 // Renders the services grouped by category
@@ -180,7 +173,7 @@ function renderView() {
 function renderCart() {
   if (cart.size === 0) {
     cartItemsList.innerHTML = `<div class="empty-cart-message">No services selected yet</div>`;
-    cartTotalPrice.textContent = "0.00kr";
+    cartTotalPrice.textContent = "0kr";
     continueBtn.disabled = true;
     continueBtn.classList.remove("ready");
     return;

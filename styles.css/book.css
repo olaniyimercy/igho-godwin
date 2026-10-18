@@ -6,6 +6,7 @@
     --booking-border: #e8e8ed;
     --booking-accent: #111111;
     --booking-font: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mobile-padding: 15px 20px 20px 20px;
 }
 
 * {
@@ -52,7 +53,7 @@
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 10px 36px 60px 36px;
+    padding: 24px 48px 48px 48px;
     display: grid;
     grid-template-columns: 1fr 360px;
     gap: 48px;
@@ -237,6 +238,7 @@
     border: 1px solid var(--booking-border);
     position: sticky;
     top: 24px;
+    width: 100%;
 }
 
 .salon-card-header {
@@ -356,13 +358,6 @@
     cursor: pointer;
 }
 
-.recommendations-box {
-    max-width: 1200px;
-    width: 100%;
-    margin: 40px auto 0 auto;
-    padding: 0 36px 60px 36px;
-}
-
 .rec-header-title {
     font-size: 16px;
     font-weight: 700;
@@ -401,7 +396,7 @@
 @media (max-width: 900px) {
     .booking-layout {
         grid-template-columns: 1fr;
-        padding: 10px 20px;
+        padding: var(--mobile-padding);
     }
 }
 
@@ -439,7 +434,7 @@
   .booking-layout {
     display: flex;
     flex-direction: column;
-    padding: 16px 16px 140px 16px; /* Extra bottom padding prevents mobile browser navbars and checkout bars from cutting off content */
+    padding: var(--mobile-padding); /* Extra bottom padding prevents mobile browser navbars and checkout bars from cutting off content */
   }
 
   .service-card,
