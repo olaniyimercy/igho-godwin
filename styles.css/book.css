@@ -60,9 +60,10 @@
 }
 
 .booking-breadcrumbs {
-    font-size: 13px;
-    color: var(--booking-text-muted);
-    margin-bottom: 8px;
+    font-size: 10px;
+    color: #B3B3B3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .booking-title {
@@ -400,5 +401,52 @@
 @media (max-width: 900px) {
     .booking-layout {
         grid-template-columns: 1fr;
+        padding: 10px 20px;
     }
+}
+
+/* 1. Ensure the overlay occupies 100% of the screen and scrolls vertically */
+.booking-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  height: 100dvh; /* Dynamic viewport height to account for mobile address bars */
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+/* 2. Prevent flex/grid blowout on the column container */
+.booking-layout {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.services-column {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important; /* Critical: allows flex/grid items to shrink below their content size */
+  box-sizing: border-box !important;
+  overflow: visible;
+}
+
+/* 3. Mobile adjustments */
+@media (max-width: 768px) {
+  .booking-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 140px 16px; /* Extra bottom padding prevents mobile browser navbars and checkout bars from cutting off content */
+  }
+
+  .service-card,
+  .category-group-block,
+  .category-intro-banner {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }

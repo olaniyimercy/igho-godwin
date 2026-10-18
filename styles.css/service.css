@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.services-main {
+    background-color: #f7f6f4;
+    color: #1a1a1a;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 60px 48px 120px 48px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.services-wrapper {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.services-page-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 46px;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    margin-bottom: 50px;
+    color: #1a1a1a;
+}
+
+.services-breadcrumbs {
+    font-size: 10px;
+    color: #B3B3B3;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* Left Column: Menu Tables */
+.service-section-block {
+    margin-bottom: 54px;
+}
+
+.service-block-heading {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+}
+
+.service-block-subheading {
+    font-size: 12.5px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.service-table-subgroup-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 28px 0 10px 0;
+}
+
+.service-pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.service-pricing-table tr {
+    border-bottom: 1px solid #CCCCCB;
+}
+
+.service-pricing-table td {
+    padding: 10px 0;
+    vertical-align: top;
+}
+
+.service-pricing-table td:last-child {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+
+.service-block-footnote {
+    font-size: 12px;
+    color: #555555;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+
+.service-block-footnote a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Right Column: Policies, Information & Booking Aside */
+.services-aside {
+    padding-top: 10px;
+}
+
+.aside-intro-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 24px;
+}
+
+.aside-action-buttons {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 44px;
+}
+
+.aside-btn {
+    display: inline-block;
+    padding: 11px 24px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.aside-btn-solid {
+    background-color: #242a30;
+    color: #ffffff;
+    border: 1px solid #242a30;
+}
+
+.aside-btn-solid:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.aside-btn-outline {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+}
+
+.aside-btn-outline:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.policy-article {
+    margin-bottom: 34px;
+}
+
+.policy-article h4 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.policy-article p {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+.policy-article p:last-child {
+    margin-bottom: 0;
+}
+
+/* Floating WhatsApp widget pill */
+.floating-whatsapp {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #25d366;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    z-index: 99;
+}
+
+@media (max-width: 960px) {
+    .services-main {
+        padding: 40px 20px 80px 20px;
+    }
+
+    .services-page-title {
+        font-size: 34px;
+        margin-bottom: 32px;
+    }
+
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .floating-whatsapp {
+        right: 16px;
+        bottom: 24px;
+        top: auto;
+        transform: none;
+    }
+}
