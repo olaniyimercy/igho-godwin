@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css/index.css">
     <link rel="stylesheet" href="styles.css/book.css">
     <title>Book Now</title>
 </head>
@@ -24,48 +25,47 @@
         </div>
 
         <div class="booking-layout">
-        <div class="services-column">
-            <h2 class="booking-title">Select services</h2>
-            <div class="booking-breadcrumbs">Hair &amp; Scalp wellness specialist / Services</div>
+            <div class="services-column">
+                <h2 class="booking-title">Select services</h2>
+                <div class="booking-breadcrumbs">Hair &amp; Scalp wellness specialist / Services</div>
 
-            <!-- Category Filter Pills: 'All Services' is active by default -->
-            <div class="filter-pills-wrap" id="categoryPills">
-                <button class="pill-btn active" data-category="all">All Services</button>
-                <button class="pill-btn" data-category="haircuts">Haircuts</button>
-                <button class="pill-btn" data-category="treatments">Hair &amp; Scalp Treatments</button>
+                <!-- Category Filter Pills: 'All Services' is active by default -->
+                <div class="filter-pills-wrap" id="categoryPills">
+                    <button class="pill-btn active" data-category="all">All Services</button>
+                    <button class="pill-btn" data-category="haircuts">Haircuts</button>
+                    <button class="pill-btn" data-category="treatments">Hair &amp; Scalp Treatments</button>
+                </div>
+
+                <!-- Main Container where categorized sections render -->
+                <div id="serviceSectionsContainer"></div>
             </div>
 
-            <!-- Main Container where categorized sections render -->
-            <div id="serviceSectionsContainer"></div>
-        </div>
-
-        <!-- Sticky Checkout Aside -->
-        <aside class="checkout-panel">
-            <div class="salon-card-header">
-                <img class="salon-avatar"
-                    src="https://images.plash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=120&q=80"
-                    alt="Ecologist Hairdresser">
-                <div class="salon-meta">
-                    <h3>Hair &amp; Scalp wellness specialist</h3>
-                    <div class="salon-rating">
-                        <span class="star-badge">★★★★★</span> 4.9 (1.2k reviews)
+            <!-- Sticky Checkout Aside -->
+            <!-- <aside class="checkout-panel">
+                <div class="salon-card-header">
+                    <img class="salon-avatar"
+                        src="https://images.plash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=120&q=80"
+                        alt="Ecologist Hairdresser">
+                    <div class="salon-meta">
+                        <h3>Hair &amp; Scalp wellness specialist</h3>
+                        <div class="salon-rating">
+                            <span class="star-badge">★★★★★</span> 4.9 (1.2k reviews)
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="cart-content-wrapper" id="cartItemsList">
-                <div class="empty-cart-message">No services selected yet</div>
-            </div>
+                <div class="cart-content-wrapper" id="cartItemsList">
+                    <div class="empty-cart-message">No services selected yet</div>
+                </div>
 
-            <div class="cart-total-bar">
-                <span>Total</span>
-                <span id="cartTotalPrice">0.00kr</span>
-            </div>
+                <div class="cart-total-bar">
+                    <span>Total</span>
+                    <span id="cartTotalPrice">0.00kr</span>
+                </div>
 
-            <button class="checkout-submit-btn" id="continueBtn" disabled>Continue</button>
-        </aside>
-    </div>
-
+                <button class="checkout-submit-btn" id="continueBtn" disabled>Continue</button>
+            </aside> -->
+        </div>
     </div>
     <script src="scripts.js/book.js"></script>
 </body>

@@ -25,6 +25,7 @@
     --footer-serif: 'Cormorant Garamond', Georgia, serif;
     --footer-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --mobile-padding: 15px 10px 10px 10px;
+    --desktop-padding: 72px 28px 28px 28px;
 }
 
 * {
@@ -52,7 +53,7 @@ a:hover {
 }
 
 .hero-banner {
-  padding: 24px 48px 48px 48px;
+  padding: var(--desktop-padding);
   position: relative;
   width: 100%;
   min-height: 85vh;
@@ -98,8 +99,7 @@ a:hover {
   align-items: center;
   max-width: 680px;
   padding: 0 24px;
-  margin-top: 18vh;
-  /* Positioned slightly below center like the source */
+  margin-top: 50vh;
 }
 
 .hero-banner__text {
@@ -182,7 +182,7 @@ a:hover {
 
 /* Header Navigation */
 header {
-  padding: 72px 48px 48px 48px;
+  padding: var(--desktop-padding);
   margin-bottom: 30px;
 }
 
@@ -504,7 +504,7 @@ header.scrolled,
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-    padding: 90px 48px 48px 48px;
+    padding: var(--desktop-padding);
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
@@ -674,7 +674,7 @@ header.scrolled,
   background-color: var(--testimonials-bg);
   color: var(--testimonials-text-main);
   font-family: var(--testimonials-sans);
-  padding: 60px 48px 48px 48px;
+  padding: var(--desktop-padding);
   box-sizing: border-box;
   width: 100%;
 }
@@ -720,10 +720,10 @@ header.scrolled,
 /* Large quotation icon */
 .testimonial-quote-mark {
   font-family: var(--testimonials-serif);
-  font-size: 78px;
-  line-height: 0.8;
+  font-size: 10rem;
+  line-height: 0.2;
   color: var(--testimonials-quote-mark);
-  margin-bottom: 18px;
+  margin-top:  4rem;
   user-select: none;
 }
 
@@ -733,7 +733,7 @@ header.scrolled,
   letter-spacing: 5px;
   color: var(--testimonials-text-main);
   margin-bottom: 24px;
-  line-height: 1;
+  line-height: 0;
 }
 
 /* Main Quote text */
@@ -808,8 +808,9 @@ header.scrolled,
   }
 
   .testimonial-quote-mark {
-    font-size: 64px;
+    font-size: 6rem;
     margin-bottom: 14px;
+    margin-top: 20px;
   }
 
   .testimonial-stars {
@@ -845,7 +846,7 @@ header.scrolled,
 .salon-marquee-section {
   background-color: var(--slider-bg);
   width: 100%;
-  padding: 60px 48px 48px 48px;
+  padding: var(--desktop-padding);
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -948,7 +949,7 @@ header.scrolled,
   background-color: var(--footer-bg);
   color: var(--footer-text);
   font-family: var(--footer-sans);
-  padding: 72px 48px 48px 48px;
+  padding: var(--desktop-padding);
   box-sizing: border-box;
   width: 100%;
   font-size: 13px;
@@ -1167,7 +1168,7 @@ header.scrolled,
     .site-footer {
         padding: var(--mobile-padding);
       }
-      
+
   .footer-links-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 16px;

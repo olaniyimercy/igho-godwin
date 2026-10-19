@@ -112,7 +112,7 @@ const continueBtn = document.getElementById("continueBtn");
 const pills = document.querySelectorAll(".pill-btn");
 
 function formatPrice(val) {
-  return val === 0 ? "Free" : val + "kr";
+  return val === 0 ? "Free" : val + " kr";
 }
 
 // Renders the services grouped by category
@@ -149,8 +149,8 @@ function renderView() {
             </div>
             <div class="service-card-bottom">
               <div class="service-card-price">${formatPrice(service.price)}</div>
-              <button class="add-service-btn ${isAdded ? "added" : ""}" data-id="${service.id}" title="${isAdded ? "Remove" : "Add"}">
-                ${isAdded ? "✓" : "+"}
+              <button class="add-service-btn ${isAdded ? "added" : ""}" data-id="${service.id}" title="${isAdded ? "Remove" : "Book Now"}">
+                ${isAdded ? "x" : "✓"}
               </button>
             </div>
           </div>
