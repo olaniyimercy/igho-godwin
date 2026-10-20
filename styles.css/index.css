@@ -204,7 +204,7 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 97.5vw; 
+    width: 92.4vw; 
     height: 1.3px;
     background-color: var(--text-main, #1a1a1a);
 }
