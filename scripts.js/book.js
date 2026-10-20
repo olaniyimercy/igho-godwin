@@ -46,7 +46,7 @@ const salonServices = [
   },
   {
     id: "srv_Long_Haircut",
-    name: "Long Haircut",
+    name: "Long/Thick Haircut",
     duration: "60 mins",
     price: 799,
     description:

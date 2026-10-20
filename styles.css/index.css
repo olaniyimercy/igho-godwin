@@ -26,6 +26,14 @@
     --footer-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --mobile-padding: 15px 10px 10px 10px;
     --desktop-padding: 30px 28px 28px 28px;
+
+    --cta-bg: #f2f2ef;
+  --btn-bg: #242a30;
+  --btn-hover: #000000;
+  --text-primary: #2b2b2b;
+  --text-muted: #6e706e;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 * {
@@ -76,7 +84,6 @@ a:hover {
   object-position: center 30%;
   filter: blur(1.5px) contrast(95%) brightness(95%);
   transform: scale(1.04);
-  /* Prevents blur bleed on edges */
 }
 
 /* Atmospheric editorial overlay with soft warm lighting */
@@ -184,7 +191,7 @@ a:hover {
 /* Header Navigation */
 header {
   padding: var(--desktop-padding);
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .nav-primary {
@@ -204,9 +211,10 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 92.4vw; 
-    height: 1.3px;
+    width: 93.2vw; 
+    height: .7px;
     background-color: var(--text-main, #1a1a1a);
+    padding: 0;
 }
 
 /* Hide Hamburger on Desktop */
@@ -346,7 +354,15 @@ header.scrolled,
 
 .logo {
   font-family: var(--font-serif);
-  font-size: 29px;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#logo {
+  font-family: var(--font-serif);
+  font-size: 24px;
   font-weight: 300;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -711,11 +727,12 @@ header.scrolled,
   letter-spacing: -0.01em;
   color: var(--testimonials-text-main);
   display: inline-block;
-  border-bottom: 1px solid var(--testimonials-text-main);
+  border-bottom: .7px solid var(--text-main, #1a1a1a);
   padding-bottom: 14px;
   margin-bottom: -15px;
   /* Aligns with the full-width border */
 }
+
 
 /* Testimonial Card / Body */
 .testimonial-carousel {
@@ -736,7 +753,7 @@ header.scrolled,
   font-size: 10rem;
   line-height: 0.2;
   color: var(--testimonials-quote-mark);
-  margin-top:  4rem;
+  margin-top:  3rem;
   user-select: none;
 }
 
@@ -956,244 +973,174 @@ header.scrolled,
     margin-top: 18px;
   }
 }
-/* FOOTER */
 
-.site-footer {
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
-  font-family: var(--footer-sans);
+.experience-cta-section {
+  background-color: var(--cta-bg);
   padding: var(--desktop-padding);
-  box-sizing: border-box;
   width: 100%;
-  font-size: 13px;
-  line-height: 1.6;
-  letter-spacing: 0.02em;
-}
-
-.site-footer a {
-  color: inherit;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-.site-footer a:hover {
-  opacity: 0.7;
-}
-
-.footer-inner {
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-/* Main Grid Layout */
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1.6fr;
-  gap: 80px;
-  margin-bottom: 70px;
-}
-
-/* Left Column: Contact, Times, Newsletter */
-.footer-left-col {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  max-width: 420px;
+  align-items: center;
+  text-align: center;
+  font-family: var(--font-serif);
 }
 
-.footer-contact-block {
-  font-size: 13.5px;
-  line-height: 1.65;
-}
-
-.footer-hours-block h4,
-.footer-newsletter-block h4 {
-  font-size: 13.5px;
-  font-weight: 600;
-  margin: 0 0 16px 0;
-  letter-spacing: 0.04em;
-}
-
-.footer-hours-table {
+.experience-cta-container {
+  max-width: 680px;
   width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.footer-hours-table td {
-  padding: 5px 0;
-  border-bottom: 1px solid var(--footer-border);
-}
-
-.footer-hours-table td:last-child {
-  text-align: right;
-}
-
-/* Newsletter Form */
-.footer-newsletter-form {
-  position: relative;
-  border-bottom: 1px solid var(--footer-border);
-  padding-bottom: 8px;
-  margin-bottom: 14px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.footer-newsletter-input {
-  background: transparent;
-  border: none;
+/* Shared Pill Button Styling */
+.pill-cta-btn {
+  display: inline-block;
+  background-color: var(--btn-bg);
   color: #ffffff;
-  width: 100%;
-  font-size: 13px;
-  font-family: inherit;
-  outline: none;
-}
-
-.footer-newsletter-input::placeholder {
-  color: var(--footer-muted);
-}
-
-.footer-newsletter-submit {
-  background: transparent;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 13px 36px;
+  /* border-radius: 999px; */
+  text-decoration: none;
   border: none;
-  color: var(--footer-muted);
-  font-size: 16px;
   cursor: pointer;
-  padding: 0 4px;
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-.footer-newsletter-submit:hover {
-  color: #ffffff;
-  transform: translateX(2px);
+.pill-cta-btn:hover {
+  background-color: var(--btn-hover);
 }
 
-.footer-newsletter-notice {
-  font-size: 11.5px;
-  line-height: 1.6;
-  color: var(--footer-muted);
+.pill-cta-btn:active {
+  transform: scale(0.98);
 }
 
-.footer-newsletter-notice a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
+/* Top "Book an appointment" Button */
+.top-booking-btn {
+  margin-bottom: 40px;
 }
 
-.footer-social-icon {
+/* Main Heading */
+.experience-heading {
+  font-family: "Cormorant Garamond", Georgia, serif;;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+/* Subtitle Text */
+.experience-subtitle {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0 0 28px 0;
+  max-width: 520px;
+}
+
+/* Middle "Review us" Button */
+.review-us-btn {
+  margin-bottom: 36px;
+}
+
+/* Social Icons Row */
+.experience-social-row {
   display: flex;
-  color: #ffffff;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 56px;
 }
 
-.footer-social-icon svg {
+.social-circle-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--btn-bg);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.social-circle-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+.social-circle-btn:active {
+  transform: scale(0.94);
+}
+
+.social-circle-btn svg {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
 
-/* Right Column: Nav Columns */
-.footer-links-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+/* Bottom Attribution */
+.experience-attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-muted);
+  font-family: var(--font-heading);
 }
 
-.footer-link-group h4 {
-  font-size: 13.5px;
+.experience-attribution strong {
+  font-style: normal;
   font-weight: 600;
-  margin: 0 0 20px 0;
-  letter-spacing: 0.04em;
-}
-
-.footer-link-group ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-link-group a {
-  color: var(--footer-text);
-  font-size: 13px;
-}
-
-.footer-link-group a.active-link {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Bottom Row: Logo, Copyright & Payment Badges */
-.footer-bottom-row {
-  border-top: 1px solid var(--footer-border);
-  padding-top: 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer-bottom-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.footer-brand {
-  font-family: var(--footer-serif);
-  font-size: 26px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  margin: 0 0 8px 0;
-}
-
-.footer-copyright {
-  color: var(--footer-muted);
-  font-size: 12px;
-  margin: 0;
+  font-family: var(--font-body);
+  letter-spacing: -0.02em;
 }
 
 /* ================= RESPONSIVE ADAPTATIONS ================= */
-@media (max-width: 992px) {
-  .footer-top-grid {
-    grid-template-columns: 1fr;
-    gap: 56px;
+@media (max-width: 768px) {
+  .experience-cta-section {
+      padding: var(--mobile-padding);
   }
 
-  .footer-left-col {
-    max-width: 100%;
+  .top-booking-btn {
+      margin-bottom: 32px;
   }
 
-  .footer-links-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
-  }
- 
-  
-}
-
-@media (max-width: 600px) {
- 
-    .site-footer {
-        padding: var(--mobile-padding);
-      }
-
-    .info-section {
-        padding: var(--mobile-padding);
-      }
-
-  .footer-links-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 16px;
+  .experience-heading {
+      font-size: 28px;
   }
 
-  .footer-bottom-content {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+  .experience-subtitle {
+      font-size: 14.5px;
+      margin-bottom: 24px;
+  }
+
+  .review-us-btn {
+      margin-bottom: 30px;
+      padding: 12px 32px;
+  }
+
+  .experience-social-row {
+      margin-bottom: 44px;
+      gap: 14px;
+  }
+
+  .social-circle-btn {
+      width: 36px;
+      height: 36px;
+  }
+
+  .social-circle-btn svg {
+      width: 18px;
+      height: 18px;
   }
 }
