@@ -1,0 +1,181 @@
+:root {
+    --cta-bg: #f2f2ef;
+    --btn-bg: #242a30;
+    --btn-hover: #000000;
+    --text-primary: #2b2b2b;
+    --text-muted: #6e706e;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.experience-cta-section {
+    background-color: var(--cta-bg);
+    padding: 80px 24px 60px 24px;
+    padding: var(--desktop-padding);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-body);
+}
+
+.experience-cta-container {
+    max-width: 680px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Shared Pill Button Styling */
+.pill-cta-btn {
+    display: inline-block;
+    background-color: var(--btn-bg);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 13px 36px;
+    /* border-radius: 999px; */
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.pill-cta-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.pill-cta-btn:active {
+    transform: scale(0.98);
+}
+
+/* Top "Book an appointment" Button */
+.top-booking-btn {
+    margin-bottom: 40px;
+}
+
+/* Main Heading */
+.experience-heading {
+    font-family: var(--font-body);
+    font-size: 38px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+/* Subtitle Text */
+.experience-subtitle {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0 0 28px 0;
+    max-width: 520px;
+}
+
+/* Middle "Review us" Button */
+.review-us-btn {
+    margin-bottom: 36px;
+}
+
+/* Social Icons Row */
+.experience-social-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 56px;
+}
+
+.social-circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--btn-bg);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.social-circle-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.social-circle-btn:active {
+    transform: scale(0.94);
+}
+
+.social-circle-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Bottom Attribution */
+.experience-attribution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--text-muted);
+    font-family: var(--font-heading);
+}
+
+.experience-attribution strong {
+    font-style: normal;
+    font-weight: 600;
+    font-family: var(--font-body);
+    letter-spacing: -0.02em;
+}
+
+/* ================= RESPONSIVE ADAPTATIONS ================= */
+@media (max-width: 768px) {
+    .experience-cta-section {
+        padding: var(--mobile-padding);
+    }
+
+    .top-booking-btn {
+        margin-bottom: 32px;
+    }
+
+    .experience-heading {
+        font-size: 28px;
+    }
+
+    .experience-subtitle {
+        font-size: 14.5px;
+        margin-bottom: 24px;
+    }
+
+    .review-us-btn {
+        margin-bottom: 30px;
+        padding: 12px 32px;
+    }
+
+    .experience-social-row {
+        margin-bottom: 44px;
+        gap: 14px;
+    }
+
+    .social-circle-btn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-circle-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+}
