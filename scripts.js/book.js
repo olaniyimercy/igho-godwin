@@ -6,6 +6,7 @@ const categoryDefinitions = [
     headerHtml: `
         <div class="category-intro-banner">
           <h3>Haircuts</h3>
+          <h4>(Gender Neutral)</h4>
           <div class="tagline">We do not destroy. We maintain.</div>
           <p>Hair washing and relaxing head massage are included with every haircut. No colouring services.</p>
         </div>
@@ -39,25 +40,25 @@ const salonServices = [
     id: "srv_Scissor_Haircut",
     name: "Scissor Haircut",
     duration: "60 mins",
-    price: 650,
+    price: 699,
     description:
-      "A tailored cut shaped with scissors for a natural, balanced finish.",
+      "For short to medium - length hair.",
     category: "haircuts",
   },
   {
     id: "srv_Long_Haircut",
-    name: "Long/Thick Haircut",
-    duration: "60 mins",
+    name: "Long & Thick Haircut",
+    duration: "75 mins",
     price: 799,
     description:
-      "A personalised cut that maintains shape, movement and healthy-looking lengths.",
+      "For longer, thicker or more time-intensive hair. Final price depends on the work required",
     category: "haircuts",
   },
   {
     id: "srv_Haircut_Beard_Trim",
     name: "Haircut & Beard Trim",
-    duration: "60 mins",
-    price: 850,
+    duration: "80 mins",
+    price: 1099,
     description:
       "A precision haircut and beard trim for a clean, balanced look.",
     category: "haircuts",
@@ -65,7 +66,7 @@ const salonServices = [
   {
     id: "srv_Wash_Blow-dry",
     name: "Wash & Blow-dry",
-    duration: "30 mins",
+    duration: "45 mins",
     price: 499,
     description:
       "A refreshing wash and professional blow-dry for smooth, beautifully styled hair.",
@@ -75,7 +76,7 @@ const salonServices = [
     id: "srv_Hydration_Conditioning_Treatment",
     name: "Hydration & Conditioning Treatment",
     duration: "60 mins",
-    price: 899,
+    price: 1390,
     description:
       "Improves softness, smoothness and manageability while reducing tangling and friction.",
     category: "treatments",
@@ -84,7 +85,7 @@ const salonServices = [
     id: "srv_Protein_Strengthening_Treatment",
     name: "Protein & Strengthening Treatment",
     duration: "60 mins",
-    price: 999,
+    price: 1490,
     description:
       "Helps improve the feel, resilience and manageability of damaged hair, including hair prone to breakage.",
     category: "treatments",
@@ -93,7 +94,7 @@ const salonServices = [
     id: "srv_Scalp Detox & Cleansing_Treatment",
     name: "Scalp Detox & Cleansing Treatment",
     duration: "75 mins",
-    price: 1299,
+    price: 1590,
     description:
       "Removes excess oil, sweat and products buildup, helping maintain a clean, comfortable scalp.",
     category: "treatments",
