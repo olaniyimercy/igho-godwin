@@ -41,8 +41,7 @@ const salonServices = [
     name: "Scissor Haircut",
     duration: "60 mins",
     price: 699,
-    description:
-      "For short to medium - length hair.",
+    description: "For short to medium - length hair.",
     category: "haircuts",
   },
   {
@@ -75,28 +74,28 @@ const salonServices = [
   {
     id: "srv_Hydration_Conditioning_Treatment",
     name: "Hydration & Conditioning Treatment",
-    duration: "60 mins",
+    duration: "90 mins",
     price: 1390,
     description:
-      "Improves softness, smoothness and manageability while reducing tangling and friction.",
+      "For dry, dull or difficult-to-manage hair. This treatment helps improve softness, smoothness and moisture, leaving the hair feeling more manageable and easier to style.",
     category: "treatments",
   },
   {
     id: "srv_Protein_Strengthening_Treatment",
     name: "Protein & Strengthening Treatment",
-    duration: "60 mins",
+    duration: "90 mins",
     price: 1490,
     description:
-      "Helps improve the feel, resilience and manageability of damaged hair, including hair prone to breakage.",
+      "For weak, fragile or damaged hair. This treatment helps improve hair strength, resilience and manageability, supporting hair that is prone to breakage.",
     category: "treatments",
   },
   {
     id: "srv_Scalp Detox & Cleansing_Treatment",
     name: "Scalp Detox & Cleansing Treatment",
-    duration: "75 mins",
+    duration: "90 mins",
     price: 1590,
     description:
-      "Removes excess oil, sweat and products buildup, helping maintain a clean, comfortable scalp.",
+      "For an oily scalp or a buildup of sweat, excess oil and styling products. This treatment deeply cleanses the scalp, helping it feel fresher, cleaner and more comfortable.",
     category: "treatments",
   },
 ];
