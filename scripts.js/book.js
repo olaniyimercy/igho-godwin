@@ -149,6 +149,8 @@ function renderView() {
             </div>
             <div class="service-card-bottom">
               <div class="service-card-price">${formatPrice(service.price)}</div>
+              
+             
               <button class="add-service-btn ${isAdded ? "added" : ""}" data-id="${service.id}" title="${isAdded ? "Remove" : "Book Now"}">
                 ${isAdded ? "x" : "✓"}
               </button>
