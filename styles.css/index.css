@@ -673,7 +673,7 @@ header.scrolled,
 }
 
 .info-btn-solid:hover {
-  background-color: #000000;
+  background-color: #556B2F;
   border-color: #000000;
 }
 
@@ -685,7 +685,7 @@ header.scrolled,
 }
 
 .info-btn-outline:hover {
-  background-color: #1a1a1a;
+  background-color: #556B2F;
   color: #ffffff;
 }
 
