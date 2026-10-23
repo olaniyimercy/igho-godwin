@@ -169,7 +169,7 @@ a:hover {
   .info-actions {
     flex-direction: column;
     width: 100%;
-    /* max-width: 200px; */
+    max-width: auto;
     gap: 12px;
   }
 
