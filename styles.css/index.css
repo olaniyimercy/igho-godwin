@@ -170,7 +170,6 @@ a:hover {
     flex-direction: column;
     width: 100%;
     max-width: auto;
-    gap: 12px;
   }
 
   .hero-banner__btn {
@@ -654,7 +653,8 @@ header.scrolled,
 }
 
 .info-actions {
-  display: flex;
+  display: block;
+  width: auto;
   gap: 16px;
 }
 
@@ -713,7 +713,7 @@ header.scrolled,
   .info-btn {
     font-size: 15px;
     font-weight: 500;
-    width: auto;
+    width: 100%;
   }
 }
 

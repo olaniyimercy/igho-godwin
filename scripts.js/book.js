@@ -226,79 +226,6 @@ function toggleCart(serviceId) {
   renderCart();
 }
 
-// // Tab Pill Listeners (Filters view to one category or back to all)
-// pills.forEach((pill) => {
-//   pill.addEventListener("click", () => {
-//     pills.forEach((p) => p.classList.remove("active"));
-//     pill.classList.add("active");
-//     selectedCategory = pill.getAttribute("data-category");
-//     renderView();
-//   });
-// });
-
-// // Initial Load: Renders all categories together with their respective headers
-// renderView();
-// renderCart();
-
-// // Helper to read query parameters from the URL
-// function getUrlCategory() {
-//   const params = new URLSearchParams(window.location.search);
-//   return params.get("category");
-// }
-
-// // Handle category activation & smooth scrolling
-// function handleUrlRouting() {
-//   const targetCategory = getUrlCategory();
-//   if (!targetCategory) {
-//     // Default to "all" or your preferred initial view
-//     selectedCategory = "all";
-//     renderView();
-//     renderCart();
-//     return;
-//   }
-
-//   // Check if a pill matches the URL parameter
-//   const targetPill = document.querySelector(
-//     `.pill-btn[data-category="${targetCategory}"]`,
-//   );
-//   if (targetPill) {
-//     // Update active pill state
-//     pills.forEach((p) => p.classList.remove("active"));
-//     targetPill.classList.add("active");
-//     selectedCategory = targetCategory;
-
-//     // Re-render only that category
-//     renderView();
-//     renderCart();
-
-//     // Smooth scroll to the content
-//     setTimeout(() => {
-//       const targetElement = document.getElementById("serviceSectionsContainer");
-//       if (targetElement) {
-//         targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-//       }
-//     }, 100);
-//   } else {
-//     renderView();
-//     renderCart();
-//   }
-// }
-
-// // Run on page load
-// handleUrlRouting();
-
-// const targetCategory = getUrlCategory();
-// if (targetCategory) {
-//   setTimeout(() => {
-//     const section = document.getElementById(
-//       `category-section-${targetCategory}`,
-//     );
-//     if (section) {
-//       section.scrollIntoView({ behavior: "smooth", block: "start" });
-//     }
-//   }, 150);
-// }
-
 
 // Helper to read query parameters from the URL
 function getUrlCategory() {
@@ -306,55 +233,69 @@ function getUrlCategory() {
   return params.get("category");
 }
 
-// Handle category activation & category-specific smooth scrolling
+// Handle category activation & smooth scrolling on page load
 function handleUrlRouting() {
   const targetCategory = getUrlCategory();
 
   if (targetCategory) {
-    // 1. Find and activate the corresponding pill button
-    const targetPill = document.querySelector(`.pill-btn[data-category="${targetCategory}"]`);
-    
+    const targetPill = document.querySelector(
+      `.pill-btn[data-category="${targetCategory}"]`
+    );
+
     if (targetPill) {
+      // 1. Activate the corresponding category pill button
       pills.forEach((p) => p.classList.remove("active"));
       targetPill.classList.add("active");
+      
+      // 2. Set view state exclusively to the requested category
       selectedCategory = targetCategory;
+      renderView();
+      renderCart();
 
-      // Scroll category pill into view on mobile horizontal scroll track
-      targetPill.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-    } else {
-      selectedCategory = targetCategory;
+      // 3. Scroll category pill into center view (for mobile viewports)
+      targetPill.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest"
+      });
+
+      // 4. Smooth scroll directly to the selected category section or container
+      setTimeout(() => {
+        const categorySection = document.getElementById(
+          `category-section-${targetCategory}`
+        ) || document.getElementById("serviceSectionsContainer");
+
+        if (categorySection) {
+          const headerOffset = 90; // Adjust for fixed header height
+          const elementPosition = categorySection.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 150);
+
+      return;
     }
-
-    // 2. Render view filtered strictly to the selected category
-    renderView();
-    renderCart();
-
-    // 3. Smooth scroll directly to the selected category section
-    setTimeout(() => {
-      // Look for explicit category container or fallback section
-      const targetSection = 
-        document.getElementById(`category-section-${targetCategory}`) || 
-        document.getElementById(targetCategory) ||
-        document.querySelector(`[data-category="${targetCategory}"]`);
-
-      if (targetSection) {
-        const headerOffset = 90; // Adjust for fixed/sticky header height
-        const elementPosition = targetSection.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
-    }, 150); // Small delay allows DOM to finish rendering visible cards
-  } else {
-    // Default to 'all' if no category parameter is present
-    selectedCategory = "all";
-    renderView();
-    renderCart();
   }
+
+  // Fallback: Default rendering when no category parameter is present
+  selectedCategory = "all";
+  renderView();
+  renderCart();
 }
 
-// Execute routing on page load
-document.addEventListener("DOMContentLoaded", handleUrlRouting);
+// Tab Pill Listeners (Manual filtering when on the page)
+pills.forEach((pill) => {
+  pill.addEventListener("click", () => {
+    pills.forEach((p) => p.classList.remove("active"));
+    pill.classList.add("active");
+    selectedCategory = pill.getAttribute("data-category");
+    renderView();
+  });
+});
+
+// Run single initialization on page load
+handleUrlRouting();
