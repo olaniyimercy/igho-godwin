@@ -350,6 +350,12 @@ header.scrolled,
     pointer-events: auto;
   }
 
+
+  .info-btn {
+    font-size: 15px;
+    font-weight: 500;
+    width: auto;
+  }
 }
 
 .logo {
@@ -702,6 +708,12 @@ header.scrolled,
 
   .info-headline {
     font-size: 34px;
+  }
+  
+  .info-btn {
+    font-size: 15px;
+    font-weight: 500;
+    width: auto;
   }
 }
 
