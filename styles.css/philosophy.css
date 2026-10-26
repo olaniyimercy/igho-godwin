@@ -7,6 +7,8 @@
     --border-light: rgba(0, 0, 0, 0.08);
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --btn-solid: #354236;
+    --btn-hover: #339D04;
 }
 
 .philosophy-page-section {
@@ -46,9 +48,9 @@
 }
 
 .main-title {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: 42px;
-    font-weight: 500;
+    font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.15;
     margin: 0 0 24px 0;
@@ -110,7 +112,7 @@
 /* Call to Action Button */
 .philosophy-cta-btn {
     display: inline-block;
-    background-color: #4b5b50;
+    background-color: var(--btn-solid);
     color: #ffffff;
     font-size: 11px;
     letter-spacing: 0.14em;
@@ -123,7 +125,7 @@
 }
 
 .philosophy-cta-btn:hover {
-    background-color: #38453d;
+    background-color: var(--btn-hover);
 }
 
 /* Mobile responsiveness */

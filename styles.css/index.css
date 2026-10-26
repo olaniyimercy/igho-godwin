@@ -376,15 +376,18 @@ header.scrolled,
 
 .menu-links {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 36px;
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.menu-links a.active {
+.menu-links a.active:hover {
   padding-bottom: 2px;
+  border-bottom: 1px solid;
 }
 
 .sub-bar {
@@ -679,8 +682,23 @@ header.scrolled,
   width: 100%;
 }
 
+.menu-btn-solid {
+  background-color: var(--btn-solid);
+  color: #ffffff;
+  border: 1px solid #242a30;
+  padding: .5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-btn-solid:hover {
+  background-color: var(--btn-hover);
+}
+
 .info-btn-solid:hover {
-  background-color: #354236;
+  background-color: var(--btn-hover);
   border-color: #000000;
 }
 

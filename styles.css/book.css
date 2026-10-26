@@ -94,7 +94,7 @@
 
 .pill-btn {
   border: 1px solid var(--booking-border);
-  background: var(--btn-solid);
+  background: white;
   color: var(--booking-text);
   padding: 9px 18px;
   border-radius: 999px;
@@ -112,7 +112,7 @@
 }
 
 .pill-btn.active:hover {
-  background-color: var(--btn-hover);
+  background-color: var(--btn-solid);
 }
 
 /* Category Group Container */
