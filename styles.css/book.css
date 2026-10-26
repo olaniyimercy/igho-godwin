@@ -8,6 +8,7 @@
   --booking-font: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
   --mobile-padding: 15px 20px 20px 20px;
   --btn-hover: #339d04;
+  --btn-solid: #354236;
 }
 
 * {
@@ -93,7 +94,7 @@
 
 .pill-btn {
   border: 1px solid var(--booking-border);
-  background: var(--booking-card-bg);
+  background: var(--btn-solid);
   color: var(--booking-text);
   padding: 9px 18px;
   border-radius: 999px;

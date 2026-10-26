@@ -1,3 +1,7 @@
+:root {
+    --btn-solid: #354236;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -131,7 +135,7 @@
 }
 
 .aside-btn-solid {
-    background-color: #242a30;
+    background-color: var(--btn-solid);
     color: #ffffff;
     border: 1px solid #242a30;
 }
