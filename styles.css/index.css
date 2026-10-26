@@ -144,7 +144,7 @@ a:hover {
 }
 
 .hero-banner__btn:hover {
-  background: #339D04;
+  background: var(--btn-solid);
   border-color: #ffffff;
   opacity: 1;
 }
@@ -694,11 +694,10 @@ header.scrolled,
 }
 
 .menu-btn-solid:hover {
-  background-color: var(--btn-hover);
+  background-color: var(--btn-solid);
 }
 
 .info-btn-solid:hover {
-  background-color: var(--btn-hover);
   border-color: #000000;
 }
 
@@ -1049,9 +1048,9 @@ header.scrolled,
   transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
-.pill-cta-btn:hover {
-  background-color: var(--btn-hover);
-}
+/* .pill-cta-btn:hover {
+  background-color: var(--btn-solid);
+} */
 
 .pill-cta-btn:active {
   transform: scale(0.98);
@@ -1111,7 +1110,7 @@ header.scrolled,
 }
 
 .social-circle-btn:hover {
-  background-color: var(--btn-hover);
+  background-color: var(--btn-solid);
 }
 
 .social-circle-btn:active {

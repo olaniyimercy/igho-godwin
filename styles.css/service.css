@@ -141,7 +141,7 @@
 }
 
 .aside-btn-solid:hover {
-    background-color: var(--btn-hover);
+    background-color: var(--btn-solid);
     border-color: #000000;
 }
 

@@ -125,7 +125,7 @@
 }
 
 .philosophy-cta-btn:hover {
-    background-color: var(--btn-hover);
+    background-color: var(--btn-solid);
 }
 
 /* Mobile responsiveness */

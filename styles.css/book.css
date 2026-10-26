@@ -106,14 +106,14 @@
 }
 
 .pill-btn.active {
-  background: var(--booking-accent);
+  background: var(--btn-solid);
   color: #ffffff;
   border-color: var(--booking-accent);
 }
 
-.pill-btn.active:hover {
+/* .pill-btn.active:hover {
   background-color: var(--btn-solid);
-}
+} */
 
 /* Category Group Container */
 .category-group-block {
