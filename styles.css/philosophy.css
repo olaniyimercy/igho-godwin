@@ -1,153 +1,257 @@
 :root {
-    --philosophy-max-width: 1200px;
-    --philosophy-bg: #f9f9f7;
-    --text-dark: #1a1a1a;
-    --text-muted: #666666;
-    --eyebrow-color: #888888;
-    --border-light: rgba(0, 0, 0, 0.08);
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-    --btn-solid: #354236;
-    --btn-hover: #339D04;
+  --philosophy-max-width: 1200px;
+  --philosophy-bg: #f8f8f6;
+  --text-dark: #1a1a1a;
+  --text-muted: #666666;
+  --eyebrow-color: #888888;
+  --border-light: rgba(0, 0, 0, 0.08);
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, sans-serif;
+  --btn-solid: #4b5b50;
+  --btn-hover: #38453d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--philosophy-bg);
+  font-family: var(--font-sans);
+  color: var(--text-dark);
 }
 
 .philosophy-page-section {
-    width: 100%;
-    background-color: var(--philosophy-bg);
-    padding: 40px 24px 80px 24px;
-    box-sizing: border-box;
-    font-family: var(--font-sans);
-    color: var(--text-dark);
+  width: 100%;
+  padding: 60px 24px 100px 24px;
+  box-sizing: border-box;
 }
 
 .philosophy-block {
-    max-width: var(--philosophy-max-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 60px;
+  max-width: var(--philosophy-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-col {
+  flex: 1.1;
+  display: flex;
+}
+
+/* Images */
+.block-img {
+  width: 100%;
+  height: 100%;
+  max-height: 275px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero Specific Layout */
+
+.hero-layout .text-col {
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-layout .block-img {
+  max-height: 520px;
+  aspect-ratio: auto;
+}
+
+.hero-sub-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background-color: var(--text-dark);
+  display: block;
 }
 
 /* Dividers */
 .section-divider {
-    max-width: var(--philosophy-max-width);
-    margin: 60px auto;
-    border: none;
-    border-top: 1px solid var(--border-light);
+  max-width: var(--philosophy-max-width);
+  margin: 70px auto;
+  border: none;
+  border-top: 1px solid var(--border-light);
 }
 
-/* Eyebrows & Titles */
+/* Eyebrows & Typography */
 .eyebrow-tag {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--eyebrow-color);
-    font-weight: 500;
-    margin-bottom: 16px;
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--eyebrow-color);
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
 .main-title {
-    font-family: var(--font-serif);
-    font-size: 42px;
-    font-weight: 300;
-    letter-spacing: -0.01em;
-    line-height: 1.15;
-    margin: 0 0 24px 0;
+  font-family: var(--font-serif);
+  font-size: 46px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-dark);
 }
 
 .subtitle {
-    font-size: 15px;
-    color: var(--text-muted);
-    font-weight: 400;
-    margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin: 0;
 }
 
 .section-title {
-    font-family: var(--font-serif);
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0 0 20px 0;
+  font-family: var(--font-serif);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 28px 0;
+  color: var(--text-dark);
 }
 
 .body-text {
-    font-size: 13.5px;
-    line-height: 1.65;
-    color: var(--text-muted);
-    margin: 0 0 16px 0;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 20px 0;
+}
+
+.body-text:last-of-type {
+  margin-bottom: 0;
 }
 
 .welcome-text {
-    color: var(--text-dark);
-    font-weight: 500;
-    margin-top: 24px;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-top: 28px;
 }
 
-/* Image styling */
-.block-img {
-    width: 100%;
-    height: 100%;
-    max-height: 480px;
-    object-fit: cover;
-    display: block;
-}
-
-/* Grid variations */
-.hero-layout .text-col,
-.hero-layout .image-col,
-.grid-2col .text-col,
-.grid-2col .image-col {
-    flex: 1;
-}
-
+/* Bottom Section Grid */
 .grid-2col-bottom {
-    align-items: flex-start;
+  align-items: flex-start;
+  gap: 80px;
 }
 
 .grid-2col-bottom .text-col {
-    flex: 1;
+  flex: 1;
 }
 
-/* Call to Action Button */
+/* CTA Button */
 .philosophy-cta-btn {
-    display: inline-block;
-    background-color: var(--btn-solid);
-    color: #ffffff;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 14px 28px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-top: 24px;
-    transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--btn-solid);
+  color: #ffffff;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 28px;
+  width: fit-content;
+  transition: background-color 0.2s ease;
 }
 
 .philosophy-cta-btn:hover {
-    background-color: var(--btn-solid);
+  background-color: var(--btn-hover);
 }
 
 /* Mobile responsiveness */
 @media (max-width: 868px) {
-    .philosophy-block {
-        flex-direction: column;
-        gap: 32px;
-    }
+  .philosophy-block {
+    flex-direction: column;
+    gap: 36px;
+  }
 
-    .grid-2col.text-right {
-        flex-direction: column-reverse;
-    }
+  .grid-2col.text-right {
+    flex-direction: column-reverse;
+  }
 
-    .main-title {
-        font-size: 32px;
-    }
+  .main-title {
+    font-size: 34px;
+  }
 
-    .section-title {
-        font-size: 28px;
-    }
+  .section-title {
+    font-size: 30px;
+  }
 
-    .section-divider {
-        margin: 40px auto;
-    }
+  .section-divider {
+    margin: 48px auto;
+  }
+
+  .hero-layout {
+    min-height: auto;
+  }
+}
+
+/* Full-Width Background Hero Section */
+.philosophy-block.hero-layout {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-height: 520px;
+  background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Internal Container Alignment */
+.hero-content-wrap {
+  max-width: var(--philosophy-max-width, 1200px);
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 390px;
+  box-sizing: border-box;
+}
+
+.hero-sub-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background-color: var(--text-dark, #1a1a1a);
+  display: block;
+}
+
+@media (max-width: 868px) {
+  .philosophy-block.hero-layout {
+    min-height: 420px;
+    background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
+  }
+
+  .hero-content-wrap {
+    min-height: 340px;
+    padding: 40px 20px;
+  }
 }
