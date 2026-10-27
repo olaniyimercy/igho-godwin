@@ -11,12 +11,17 @@
   --btn-hover: #38453d;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: var(--philosophy-bg);
   font-family: var(--font-sans);
   color: var(--text-dark);
+  padding: 0 42px 32px 42px;
 }
 
 .philosophy-page-section {
