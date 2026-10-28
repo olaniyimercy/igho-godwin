@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+#appoint-mobile {
+  color: white;
+}
+
 /* Hero Section 2-Column Layout */
 .philosophy-block.hero-layout {
     width: 100%;
