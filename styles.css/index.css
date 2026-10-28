@@ -1214,27 +1214,28 @@ header.scrolled,
   padding: 0;
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 11px;
   font-weight: 400;
-  color: var(--text-muted, #666666);
+  color: #666666;
   cursor: pointer;
   text-transform: uppercase;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   outline: none;
 }
 
 .lang-link:hover {
-  color: var(--text-dark, #1a1a1a);
+  color: #1a1a1a;
 }
 
+/* Active Button Style */
 .lang-link.active {
-  font-weight: 600;
-  color: var(--text-dark, #1a1a1a);
-  border-bottom: 1px solid var(--text-dark, #1a1a1a);
+  font-weight: 600 !important;
+  color: #1a1a1a !important;
+  border-bottom: 1px solid #1a1a1a !important;
 }
 
 .lang-divider {
-  color: var(--eyebrow-color, #888888);
+  color: var(--btn-solid);
   font-size: 10px;
   user-select: none;
 }

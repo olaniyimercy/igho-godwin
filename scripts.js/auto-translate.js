@@ -10,9 +10,6 @@ function googleTranslateElementInit() {
 }
 
 (function () {
-  const flags = { en: "🇬🇧", sv: "🇸🇪" };
-  const codes = { en: "EN", sv: "SV" };
-
   if (!document.getElementById("google-translate-script")) {
     const gtScript = document.createElement("script");
     gtScript.id = "google-translate-script";
@@ -21,7 +18,7 @@ function googleTranslateElementInit() {
     document.head.appendChild(gtScript);
   }
 
-  // Hide top banner and tooltips underground
+  // Hide Google Translate banner & popups underground
   const suppressGoogleUI = () => {
     document.body.style.top = "0px";
     document.body.style.position = "static";
@@ -56,10 +53,8 @@ function googleTranslateElementInit() {
     attributeFilter: ["style", "class"],
   });
 
-  // Strict English default
   function getStoredLanguage() {
-    const saved = localStorage.getItem("preferred_lang");
-    return saved === "sv" ? "sv" : "en";
+    return localStorage.getItem("preferred_lang") === "sv" ? "sv" : "en";
   }
 
   function setTranslateCookie(langCode) {
@@ -71,71 +66,50 @@ function googleTranslateElementInit() {
 
   function applyTranslation(langCode) {
     setTranslateCookie(langCode);
+
     const selectEl = document.querySelector(".goog-te-combo");
-    if (selectEl && selectEl.value !== langCode) {
+    if (selectEl) {
       selectEl.value = langCode;
       selectEl.dispatchEvent(new Event("change"));
     }
   }
 
-  function updateDropdownUI(lang) {
-    const flagEl = document.getElementById("currentLangFlag");
-    const codeEl = document.getElementById("currentLangCode");
-    if (flagEl) flagEl.textContent = flags[lang];
-    if (codeEl) codeEl.textContent = codes[lang];
+  // Immediately update active status on buttons
+  function updateLinkUI(lang) {
+    const btnEn = document.getElementById("btn-lang-en");
+    const btnSv = document.getElementById("btn-lang-sv");
 
-    document.querySelectorAll(".lang-option").forEach((opt) => {
-      opt.classList.toggle("active", opt.getAttribute("data-lang") === lang);
-    });
+    if (btnEn) btnEn.classList.toggle("active", lang === "en");
+    if (btnSv) btnSv.classList.toggle("active", lang === "sv");
   }
 
+  // Global handler for clicks - instantaneous execution on single click
   window.switchLanguage = function (lang) {
     if (lang !== "en" && lang !== "sv") return;
+
     localStorage.setItem("preferred_lang", lang);
-    updateDropdownUI(lang);
+    updateLinkUI(lang);
+    setTranslateCookie(lang);
+
+    // Trigger select change immediately, then retry if combo element isn't attached yet
     applyTranslation(lang);
+    setTimeout(() => applyTranslation(lang), 100);
   };
 
   document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".lang-dropdown-container");
-    const triggerBtn = document.getElementById("langDropdownBtn");
-    const options = document.querySelectorAll(".lang-option");
-
-    triggerBtn?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = container.classList.toggle("is-open");
-      triggerBtn.setAttribute("aria-expanded", isOpen);
-    });
-
-    options.forEach((opt) => {
-      opt.addEventListener("click", () => {
-        const lang = opt.getAttribute("data-lang");
-        window.switchLanguage(lang);
-        container?.classList.remove("is-open");
-        triggerBtn?.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    document.addEventListener("click", (e) => {
-      if (container && !container.contains(e.target)) {
-        container.classList.remove("is-open");
-        triggerBtn?.setAttribute("aria-expanded", "false");
-      }
-    });
-
     const activeLang = getStoredLanguage();
-    updateDropdownUI(activeLang);
+    updateLinkUI(activeLang);
 
     let attempts = 0;
     const checkGoogleInterval = setInterval(() => {
       attempts++;
       const selectEl = document.querySelector(".goog-te-combo");
-      if (selectEl || attempts > 20) {
+      if (selectEl || attempts > 25) {
         clearInterval(checkGoogleInterval);
         applyTranslation(activeLang);
       }
-    }, 150);
+    }, 100);
 
-    setInterval(suppressGoogleUI, 300);
+    setInterval(suppressGoogleUI, 250);
   });
 })();
