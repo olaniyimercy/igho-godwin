@@ -18,22 +18,26 @@
   --testimonials-sans:
     "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
-    --footer-bg: #222629;
-    --footer-text: #ffffff;
-    --footer-muted: #a4a7aa;
-    --footer-border: rgba(255, 255, 255, 0.12);
-    --footer-serif: 'Cormorant Garamond', Georgia, serif;
-    --footer-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --mobile-padding: 15px 10px 10px 10px;
-    --desktop-padding: 30px 28px 28px 28px;
+  --footer-bg: #222629;
+  --footer-text: #ffffff;
+  --footer-muted: #a4a7aa;
+  --footer-border: rgba(255, 255, 255, 0.12);
+  --footer-serif: "Cormorant Garamond", Georgia, serif;
+  --footer-sans:
+    "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --mobile-padding: 15px 10px 10px 10px;
+  --desktop-padding: 30px 28px 28px 28px;
 
-    --cta-bg: #f2f2ef;
+  --cta-bg: #f2f2ef;
   --btn-bg: #242a30;
-  --btn-hover: #339D04;
+  --btn-hover: #339d04;
   --text-primary: #2b2b2b;
   --text-muted: #6e706e;
-  --font-heading: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body:
+    "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
   --btn-solid: #354236;
 }
 
@@ -195,60 +199,62 @@ header {
 }
 
 .nav-primary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-    position: relative;
-    z-index: 10000; 
-    position: relative;
-    border-bottom: none !important; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 10000;
+  position: relative;
+  border-bottom: none !important;
 }
 
 .nav-primary::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 93.2vw; 
-    height: .7px;
-    background-color: var(--text-main, #1a1a1a);
-    padding: 0;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 93.2vw;
+  height: 0.7px;
+  background-color: var(--text-main, #1a1a1a);
+  padding: 0;
 }
 
 /* Hide Hamburger on Desktop */
 .hamburger-btn {
-    display: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    position: relative;
-    z-index: 10002 !important; /* Highest priority */
-  }
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 10002 !important; /* Highest priority */
+}
 
-  .hamburger-btn span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background-color: var(--text-main, #1a1a1a);
-    transition: transform 0.3s ease, opacity 0.2s ease;
-  }
+.hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--text-main, #1a1a1a);
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease;
+}
 
 /* Hamburger "X" Animation when open */
 .hamburger-btn.is-active span:nth-child(1) {
-    transform: translateY(6.5px) rotate(45deg);
-  }
-  .hamburger-btn.is-active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger-btn.is-active span:nth-child(3) {
-    transform: translateY(-6.5px) rotate(-45deg);
-  }
+  transform: translateY(6.5px) rotate(45deg);
+}
+.hamburger-btn.is-active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-btn.is-active span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
 
 .nav-backdrop {
   display: none;
@@ -277,9 +283,9 @@ header.scrolled,
 
 /* ================= Mobile Auto-Switch (<= 768px) ================= */
 @media (max-width: 768px) {
-    header {
-        padding: var(--mobile-padding);
-    }
+  header {
+    padding: var(--mobile-padding);
+  }
   .nav-primary {
     align-items: center; /* Centers logo and hamburger vertically */
     padding-bottom: 10px;
@@ -345,7 +351,9 @@ header.scrolled,
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
   }
 
   .nav-backdrop.is-open {
@@ -353,7 +361,6 @@ header.scrolled,
     visibility: visible;
     pointer-events: auto;
   }
-
 
   .info-btn {
     font-size: 15px;
@@ -522,7 +529,7 @@ header.scrolled,
   }
 
   .sub-bar-name {
-   display: none;
+    display: none;
   }
 
   .sub-bar {
@@ -548,7 +555,7 @@ header.scrolled,
     -apple-system,
     BlinkMacSystemFont,
     sans-serif;
-    padding: var(--desktop-padding);
+  padding: var(--desktop-padding);
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 20px;
@@ -620,7 +627,7 @@ header.scrolled,
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .info-contact a {
@@ -692,7 +699,7 @@ header.scrolled,
   background-color: var(--btn-solid);
   color: #ffffff;
   border: 1px solid #242a30;
-  padding: .5rem;
+  padding: 0.5rem;
   text-align: center;
   display: flex;
   align-items: center;
@@ -733,7 +740,7 @@ header.scrolled,
   .info-headline {
     font-size: 34px;
   }
-  
+
   .info-btn {
     font-size: 15px;
     font-weight: 500;
@@ -770,12 +777,11 @@ header.scrolled,
   letter-spacing: -0.01em;
   color: var(--testimonials-text-main);
   display: inline-block;
-  border-bottom: .7px solid var(--text-main, #1a1a1a);
+  border-bottom: 0.7px solid var(--text-main, #1a1a1a);
   padding-bottom: 14px;
   margin-bottom: -15px;
   /* Aligns with the full-width border */
 }
-
 
 /* Testimonial Card / Body */
 .testimonial-carousel {
@@ -796,7 +802,7 @@ header.scrolled,
   font-size: 10rem;
   line-height: 0.2;
   color: var(--testimonials-quote-mark);
-  margin-top:  3rem;
+  margin-top: 3rem;
   user-select: none;
 }
 
@@ -1051,7 +1057,9 @@ header.scrolled,
   text-decoration: none;
   border: none;
   cursor: pointer;
-  transition: background-color 0.25s ease, transform 0.15s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.15s ease;
 }
 
 /* .pill-cta-btn:hover {
@@ -1069,7 +1077,7 @@ header.scrolled,
 
 /* Main Heading */
 .experience-heading {
-  font-family: "Cormorant Garamond", Georgia, serif;;
+  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 38px;
   font-weight: 600;
   color: var(--text-primary);
@@ -1112,7 +1120,9 @@ header.scrolled,
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: background-color 0.25s ease, transform 0.15s ease;
+  transition:
+    background-color 0.25s ease,
+    transform 0.15s ease;
 }
 
 .social-circle-btn:hover {
@@ -1134,7 +1144,7 @@ header.scrolled,
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   font-size: 15px;
   font-style: italic;
   color: var(--text-muted);
@@ -1151,78 +1161,135 @@ header.scrolled,
 /* ================= RESPONSIVE ADAPTATIONS ================= */
 @media (max-width: 768px) {
   .experience-cta-section {
-      padding: var(--mobile-padding);
+    padding: var(--mobile-padding);
   }
 
   .top-booking-btn {
-      margin-bottom: 32px;
+    margin-bottom: 32px;
   }
 
   .experience-heading {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .experience-subtitle {
-      font-size: 14.5px;
-      margin-bottom: 24px;
+    font-size: 14.5px;
+    margin-bottom: 24px;
   }
 
   .review-us-btn {
-      margin-bottom: 30px;
-      padding: 12px 32px;
+    margin-bottom: 30px;
+    padding: 12px 32px;
   }
 
   .experience-social-row {
-      margin-bottom: 44px;
-      gap: 14px;
+    margin-bottom: 44px;
+    gap: 14px;
   }
 
   .social-circle-btn {
-      width: 36px;
-      height: 36px;
+    width: 36px;
+    height: 36px;
   }
 
   .social-circle-btn svg {
-      width: 18px;
-      height: 18px;
+    width: 18px;
+    height: 18px;
   }
 }
-
-/* Inline Language Switcher Styles */
-.lang-switcher-inline {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: inherit;
-    font-size: 13px;
-    letter-spacing: 0.08em;
+/* Inline Text Switcher */
+.lang-switch-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 10px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
-.lang-switch-btn {
-    background: transparent;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-family: inherit;
-    font-size: 10px;
-    font-weight: 400;
-    color: var(--btn-solid);
-    cursor: pointer;
-    transition: color 0.2s ease, font-weight 0.2s ease;
-    text-transform: uppercase;
+.lang-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
+  color: var(--text-muted, #666666);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  outline: none;
 }
 
-.lang-switch-btn:hover {
-    color: var(--btn-solid);
+.lang-link:hover {
+  color: var(--text-dark, #1a1a1a);
 }
 
-.lang-switch-btn.active {
-    font-weight: 600;
-    color: var(--btn-solid);
+.lang-link.active {
+  font-weight: 600;
+  color: var(--text-dark, #1a1a1a);
+  border-bottom: 1px solid var(--text-dark, #1a1a1a);
 }
 
 .lang-divider {
-    color: var(--btn-solid);
-    font-size: 12px;
-    user-select: none;
+  color: var(--eyebrow-color, #888888);
+  font-size: 10px;
+  user-select: none;
+}
+
+/* Hide all Google Translate popup tooltips, top banner, and hover highlights */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html {
+  top: 0 !important;
+}
+
+body {
+  top: 0px !important;
+  position: static !important;
+}
+
+.notranslate {
+  -webkit-translate: no !important;
+  -moz-translate: no !important;
+  -ms-translate: no !important;
+  translate: no !important;
+}
+
+/* Hide all Google Translate popup tooltips & feedback cards */
+#goog-gt-tt,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Ensure Google doesn't translate element tags tagged with notranslate */
+.notranslate {
+  -webkit-translate: no !important;
+  -moz-translate: no !important;
+  -ms-translate: no !important;
+  translate: no !important;
 }
