@@ -327,6 +327,10 @@ header.scrolled,
     border-bottom: 1px solid #f0f0f0;
   }
 
+  #appoint-mobile {
+    color: white;
+  }
+
   /* 2. Backdrop sits strictly BEHIND the drawer */
   .nav-backdrop {
     display: block;
@@ -403,6 +407,8 @@ header.scrolled,
 
 .social-top {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 15px;
 }
 
@@ -1180,4 +1186,43 @@ header.scrolled,
       width: 18px;
       height: 18px;
   }
+}
+
+/* Inline Language Switcher Styles */
+.lang-switcher-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+}
+
+.lang-switch-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--btn-solid);
+    cursor: pointer;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    text-transform: uppercase;
+}
+
+.lang-switch-btn:hover {
+    color: var(--btn-solid);
+}
+
+.lang-switch-btn.active {
+    font-weight: 600;
+    color: var(--btn-solid);
+}
+
+.lang-divider {
+    color: var(--btn-solid);
+    font-size: 12px;
+    user-select: none;
 }

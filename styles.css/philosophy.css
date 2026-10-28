@@ -17,8 +17,65 @@
   box-sizing: border-box;
 }
 
+/* Hero Section 2-Column Layout */
+.philosophy-block.hero-layout {
+    width: 100%;
+    max-width: var(--philosophy-max-width, 1200px);
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 480px;
+    gap: 60px;
+    background-image: none;
+}
+
+.hero-layout .text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Keeps all text grouped naturally at the top */
+  gap: 24px;                  /* Controls overall spacing between elements */
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hero-sub-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                  /* Tightens distance between line and subtitle */
+  margin-top: 12px;           /* Adds a subtle gap under the main heading */
+}
+
+.eyebrow-line {
+    width: 32px;
+    height: 1px;
+    background-color: var(--text-dark, #1a1a1a);
+    display: block;
+}
+
+.hero-layout .image-col {
+    flex: 1.1;
+    display: flex;
+}
+
+.hero-layout .block-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 868px) {
+    .philosophy-block.hero-layout {
+        flex-direction: column;
+        gap: 32px;
+        min-height: auto;
+    }
+}
+
 body {
-  background-color: var(--philosophy-bg);
+  background-color: #ffffff;;
   font-family: var(--font-sans);
   color: var(--text-dark);
   padding: 0 42px 32px 42px;
@@ -47,6 +104,10 @@ body {
 .image-col {
   flex: 1.1;
   display: flex;
+  background-image: url(/images/Luxurious\ Salon\ Shampoo\ Experience.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Images */
@@ -55,17 +116,11 @@ body {
   height: 100%;
   max-height: 275px;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
 /* Hero Specific Layout */
-
-.hero-layout .text-col {
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
 
 .hero-layout .block-img {
   max-height: 520px;
@@ -207,21 +262,6 @@ body {
   }
 }
 
-/* Full-Width Background Hero Section */
-.philosophy-block.hero-layout {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  min-height: 520px;
-  background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
-  background-size: cover;
-  background-position: center right;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-}
 
 /* Internal Container Alignment */
 .hero-content-wrap {
@@ -250,10 +290,6 @@ body {
 }
 
 @media (max-width: 868px) {
-  .philosophy-block.hero-layout {
-    min-height: 420px;
-    background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
-  }
 
   .hero-content-wrap {
     min-height: 340px;
