@@ -23,15 +23,15 @@
 
 /* Hero Section 2-Column Layout */
 .philosophy-block.hero-layout {
-    width: 100%;
-    max-width: var(--philosophy-max-width, 1200px);
-    margin: 0 auto;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    min-height: 480px;
-    gap: 60px;
-    background-image: none;
+  width: 100%;
+  max-width: var(--philosophy-max-width, 1200px);
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 480px;
+  gap: 60px;
+  background-image: none;
 }
 
 .hero-layout .text-col {
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Keeps all text grouped naturally at the top */
-  gap: 24px;                  /* Controls overall spacing between elements */
+  gap: 24px; /* Controls overall spacing between elements */
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -47,20 +47,20 @@
 .hero-sub-wrap {
   display: flex;
   flex-direction: column;
-  gap: 12px;                  /* Tightens distance between line and subtitle */
-  margin-top: 12px;           /* Adds a subtle gap under the main heading */
+  gap: 12px; /* Tightens distance between line and subtitle */
+  margin-top: 12px; /* Adds a subtle gap under the main heading */
 }
 
 .eyebrow-line {
-    width: 32px;
-    height: 1px;
-    background-color: var(--text-dark, #1a1a1a);
-    display: block;
+  width: 32px;
+  height: 1px;
+  background-color: var(--text-dark, #1a1a1a);
+  display: block;
 }
 
 .hero-layout .image-col {
-    flex: 1.3;
-    display: flex;
+  flex: 1.3;
+  display: flex;
 }
 
 .hero-layout .block-img {
@@ -72,28 +72,28 @@
 }
 
 @media (max-width: 868px) {
-    .philosophy-block.hero-layout {
-        flex-direction: column;
-        gap: 32px;
-        min-height: auto;
-    }
+  .philosophy-block.hero-layout {
+    flex-direction: column;
+    gap: 32px;
+    min-height: auto;
+  }
 
-    .hero-layout .image-col {
-      width: 100%;
-      min-height: 350px; /* Ensures container retains height on mobile */
+  .hero-layout .image-col {
+    width: 100%;
+    min-height: 350px; /* Ensures container retains height on mobile */
   }
 
   .hero-layout .block-img {
-      width: 100%;
-      height: 100%;
-      min-height: 350px;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
   }
 }
 
 body {
-  background-color: #ffffff;;
+  background-color: #ffffff;
   font-family: var(--font-sans);
   color: var(--text-dark);
   padding: 0 42px 32px 42px;
@@ -280,7 +280,6 @@ body {
   }
 }
 
-
 /* Internal Container Alignment */
 .hero-content-wrap {
   max-width: var(--philosophy-max-width, 1200px);
@@ -308,7 +307,6 @@ body {
 }
 
 @media (max-width: 868px) {
-
   .hero-content-wrap {
     min-height: 340px;
     padding: 40px 20px;

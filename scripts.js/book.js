@@ -226,7 +226,6 @@ function toggleCart(serviceId) {
   renderCart();
 }
 
-
 // Helper to read query parameters from the URL
 function getUrlCategory() {
   const params = new URLSearchParams(window.location.search);
@@ -239,14 +238,14 @@ function handleUrlRouting() {
 
   if (targetCategory) {
     const targetPill = document.querySelector(
-      `.pill-btn[data-category="${targetCategory}"]`
+      `.pill-btn[data-category="${targetCategory}"]`,
     );
 
     if (targetPill) {
       // 1. Activate the corresponding category pill button
       pills.forEach((p) => p.classList.remove("active"));
       targetPill.classList.add("active");
-      
+
       // 2. Set view state exclusively to the requested category
       selectedCategory = targetCategory;
       renderView();
@@ -256,23 +255,24 @@ function handleUrlRouting() {
       targetPill.scrollIntoView({
         behavior: "smooth",
         inline: "center",
-        block: "nearest"
+        block: "nearest",
       });
 
       // 4. Smooth scroll directly to the selected category section or container
       setTimeout(() => {
-        const categorySection = document.getElementById(
-          `category-section-${targetCategory}`
-        ) || document.getElementById("serviceSectionsContainer");
+        const categorySection =
+          document.getElementById(`category-section-${targetCategory}`) ||
+          document.getElementById("serviceSectionsContainer");
 
         if (categorySection) {
           const headerOffset = 90; // Adjust for fixed header height
           const elementPosition = categorySection.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth"
+            behavior: "smooth",
           });
         }
       }, 150);

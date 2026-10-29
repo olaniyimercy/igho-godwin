@@ -111,10 +111,6 @@
   border-color: var(--booking-accent);
 }
 
-/* .pill-btn.active:hover {
-  background-color: var(--btn-solid);
-} */
-
 /* Category Group Container */
 .category-group-block {
   margin-bottom: 40px;
@@ -122,10 +118,6 @@
 
 /* Category Intro Banners */
 .category-intro-banner {
-  /* background: #ffffff;
-    border: 1px solid var(--booking-border);
-    border-radius: 12px;
-    padding: 24px 26px; */
   margin-bottom: 20px;
 }
 
