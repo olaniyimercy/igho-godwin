@@ -135,7 +135,7 @@ body {
 #section-hero .hero-image {
   flex: 1.3;
   display: flex;
-  background-image: url("./images/Luxurious\ Salon\ Shampoo\ Experience.png");
+  background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,5 +315,10 @@ body {
 
   .section-divider {
       margin: 40px auto;
+  }
+
+  #section-hero .hero-image {
+    background-image: url("/images/Luxurious\ Salon\ Shampoo\ Experience.png");
+    
   }
 }
