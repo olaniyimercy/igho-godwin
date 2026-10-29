@@ -151,7 +151,7 @@ function renderView() {
               <div class="service-card-price">${formatPrice(service.price)}</div>
               
              
-              <button class="add-service-btn ${isAdded ? "added" : ""}" data-id="${service.id}" title="${isAdded ? "Remove" : "Book Now"}">
+              <button class="add-service-btn ${isAdded ? "added" : ""}" data-id="${service.id}" title="${isAdded ? "Remove" : "Book Now"}" onclick="window.location.href='https://ighogodwinsalong.bokadirekt.se/'">
                 ${isAdded ? "x" : "✓"}
               </button>
             </div>
