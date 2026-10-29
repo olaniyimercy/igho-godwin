@@ -960,7 +960,7 @@ header.scrolled,
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   pointer-events: none;
 }
 
