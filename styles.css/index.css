@@ -1328,12 +1328,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header Section */
-.footer-brand-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 .footer-logo {
     font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
     font-size: 32px;
