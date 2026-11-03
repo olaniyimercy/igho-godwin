@@ -912,6 +912,8 @@ header.scrolled,
   /* padding: var(--desktop-padding); */
   padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
