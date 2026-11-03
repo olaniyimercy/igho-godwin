@@ -87,7 +87,7 @@ a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  filter: blur(1.5px) contrast(95%) brightness(95%);
+  filter: blur(0rem) contrast(95%) brightness(95%);
   transform: scale(1.04);
 }
 
@@ -909,7 +909,9 @@ header.scrolled,
 .salon-marquee-section {
   background-color: var(--slider-bg);
   width: 100%;
-  padding: var(--desktop-padding);
+  /* padding: var(--desktop-padding); */
+  padding-left: 0 !important;
+  padding-right: 0 !important;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
@@ -919,7 +921,7 @@ header.scrolled,
 .salon-marquee-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 40px;
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -929,6 +931,8 @@ header.scrolled,
   position: relative;
   border-radius: 0px;
   cursor: grab;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .marquee-viewport:active {
@@ -987,9 +991,9 @@ header.scrolled,
     padding: var(--mobile-padding);
   }
 
-  .salon-marquee-container {
+  /* .salon-marquee-container {
     padding: 0 18px;
-  }
+  } */
 
   .marquee-track {
     gap: 16px;
@@ -1277,4 +1281,145 @@ body {
   -moz-translate: no !important;
   -ms-translate: no !important;
   translate: no !important;
+}
+
+.testimonial-cta-btn {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  
+  background-color: var(--btn-solid, #4b5b50);
+  color: #ffffff !important;
+  font-family: var(--font-sans, "Montserrat", sans-serif);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 28px;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.testimonial-cta-btn:hover {
+  background-color: var(--btn-hover, #38453d);
+  opacity: 0.9;
+}
+
+.testimonial-readmore-btn:hover {
+  color: var(--btn-solid, #4b5b50);
+  opacity: 0.85;
+}
+
+/* Footer Outer Wrapper */
+.site-footer {
+    width: 100%;
+    background-color: var(--philosophy-bg, #f8f8f6);
+    padding: 80px 24px 40px 24px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Constrained Center Container */
+.footer-container {
+    max-width: var(--philosophy-max-width, 1140px);
+    margin: 0 auto;
+}
+
+/* 4-Column Layout Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Typography & Links */
+.footer-logo {
+    font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif);
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+    color: var(--text-dark, #1a1a1a);
+}
+
+.footer-tagline {
+    font-size: 13px;
+    color: var(--text-muted, #666666);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.site-footer .eyebrow-tag {
+    display: block;
+    font-family: var(--font-sans, "Montserrat", sans-serif);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dark, #1a1a1a);
+    margin-bottom: 16px;
+}
+
+.footer-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-list li {
+    margin-bottom: 8px;
+}
+
+.footer-link-list a,
+.footer-text,
+.footer-text a {
+    font-family: var(--font-sans, "Montserrat", sans-serif);
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--text-muted, #666666);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-link-list a:hover,
+.map-link:hover {
+    color: var(--text-dark, #1a1a1a);
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 4px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    padding-top: 24px;
+    text-align: center;
+    font-size: 11px;
+    color: var(--text-muted, #666666);
+    letter-spacing: 0.02em;
+}
+
+.footer-bottom a {
+    color: var(--text-dark, #1a1a1a);
+    text-decoration: underline;
+}
+
+/* Mobile Breakpoint */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 60px 24px 30px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 40px;
+    }
 }

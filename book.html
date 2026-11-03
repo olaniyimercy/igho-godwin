@@ -18,19 +18,43 @@
 <body>
     <div id="google_translate_element" style="display:none;"></div>
 
-    <div class="booking-overlay" id="bookingOverlay">
-        <div class="booking-nav-bar">
-            <button class="booking-nav-btn" onclick="window.location.href='index.html'"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="2.5em" height="2.5em" viewBox="0 0 512 512">
-                    <path d="M0 0h512v512H0z" fill="none" />
-                    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"
-                        d="M249.38 336L170 256l79.38-80m-68.35 80H342" />
-                    <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="32"
-                        d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192s192-86 192-192Z" />
-                </svg></button>
-            <button class="booking-nav-btn" onclick="window.href='#'" aria-label="Return home"></button>
+    <header>
+        <div class="nav-primary">
+            <h1 class="logo"><a href="./index.html">Igho Godwin</a></h1>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <nav class="menu-links" id="menuLinks">
+                <a href="./services.html" class="active">Salon</a>
+                <a href="./book.html?category=haircuts" class="active">Haircuts</a>
+                <a href="./book.html?category=treatments" class="active">Treatments</a>
+                <a href="./philosophy.html" class="active">Our Philosophy</a>
+                <a href="./gift-card.html" class="active">Gift card</a>
+                <a href="https://ighogodwinsalong.bokadirekt.se/" class="menu-btn-solid">Book an Appointment</a>
+            </nav>
         </div>
+    
+        <div class="nav-backdrop" id="navBackdrop"></div>
+    
+        <div class="sub-bar">
+            <div class="sub-bar-name">Hair &amp; Scalp wellness specialist</div>
+            <div class="social-top">
+                <!-- Inline Text Language Links -->
+                <div class="lang-switch-inline notranslate" translate="no">
+                    <button class="lang-link active" id="btn-lang-en" onclick="switchLanguage('en')">ENG</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-link" id="btn-lang-sv" onclick="switchLanguage('sv')">SV</button>
+                </div>
+            </div>
+        </div>
+    </header>
 
+
+    <div class="booking-overlay" id="bookingOverlay">
+        
         <div class="booking-layout">
             <div class="services-column">
                 <h2 class="booking-title">Select services</h2>
