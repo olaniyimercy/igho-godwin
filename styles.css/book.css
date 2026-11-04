@@ -204,29 +204,27 @@
 }
 
 .add-service-btn {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 1px solid #111111;
-  background: #ffffff;
-  color: #111111;
-  font-size: 20px;
+  border: 1px solid #354236;
+  background: #354236;
+  color: #ffffff;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  padding: .2rem .8rem;
 }
 
-.add-service-btn:hover {
+/* .add-service-btn:hover {
   background: #111111;
   color: #ffffff;
-}
+} */
 
-.add-service-btn.added {
+/* .add-service-btn.added {
   background: #111111;
   color: #ffffff;
-}
+} */
 
 /* Sidebar Checkout */
 .checkout-panel {

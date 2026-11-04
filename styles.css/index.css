@@ -85,7 +85,7 @@ a:hover {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center 30%;
   filter: blur(0rem) contrast(95%) brightness(95%);
   transform: scale(1.04);
@@ -95,12 +95,13 @@ a:hover {
 .hero-banner__overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle at 75% 25%,
     rgba(255, 230, 200, 0.18) 0%,
     rgba(35, 30, 25, 0.35) 60%,
     rgba(15, 12, 10, 0.55) 100%
-  );
+  ); */
+  background: var(--btn-solid);
 }
 
 .hero-banner__content {
@@ -1043,7 +1044,6 @@ header.scrolled,
   font-weight: 500;
   letter-spacing: 0.02em;
   padding: 13px 36px;
-  /* border-radius: 999px; */
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -1051,10 +1051,6 @@ header.scrolled,
     background-color 0.25s ease,
     transform 0.15s ease;
 }
-
-/* .pill-cta-btn:hover {
-  background-color: var(--btn-solid);
-} */
 
 .pill-cta-btn:active {
   transform: scale(0.98);
@@ -1317,8 +1313,8 @@ body {
 /* Footer Container */
 .site-footer {
     width: 100%;
-    background-color: var(--philosophy-bg, #f8f8f6);
-    padding: 70px 24px 40px 24px;
+    background-color: var(--cta-bg);
+    padding: 0px 24px 40px 24px;
     box-sizing: border-box;
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -1401,7 +1397,7 @@ body {
 .footer-contacts {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: .4rem;
 }
 
@@ -1431,6 +1427,13 @@ body {
         padding: 50px 20px 30px 20px;
     }
 
+    #footer_text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1440,4 +1443,22 @@ body {
     .footer-socials {
         gap: 24px;
     }
+}
+
+.instagram-widget-wrapper {
+  width: 100%;
+  /* max-width: 1200px; */
+  /* Limits width on ultra-wide desktop monitors */
+  margin: 0 auto;
+  /* Centers the feed on your page */
+  /* padding: 20px; */
+  /* Adds breathing room around the edges */
+  box-sizing: border-box;
+}
+
+.lightwidget-widget {
+  transition: min-height 0.3s ease;
+  /* Smooth layout shift adjustment */
+  min-height: 300px;
+  /* Prevents layout collapse before script loads */
 }
