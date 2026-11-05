@@ -606,6 +606,7 @@ header.scrolled,
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-left: 3rem;
 }
 
 .info-body-copy {
@@ -1060,7 +1061,7 @@ header.scrolled,
 }
 
 .experience-cta-section {
-  background-color: var(--cta-bg);
+  background-color: var(--testimonials-bg);
   padding: var(--desktop-padding);
   width: 100%;
   box-sizing: border-box;
@@ -1357,7 +1358,7 @@ body {
 /* Footer Container */
 .site-footer {
     width: 100%;
-    background-color: var(--cta-bg);
+    background-color: var(--testimonials-bg);
     padding: 0px 24px 40px 24px;
     box-sizing: border-box;
     border-top: 1px solid var(--cta-bg);
