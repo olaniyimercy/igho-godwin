@@ -96,81 +96,116 @@ window.addEventListener("scroll", () => {
     },
     {
       quote: "Read More",
-      link: "https://www.google.com/maps/place/Ekologisk+Fris%C3%B6r/@57.70914,11.9851665,574m/data=!3m1!1e3!4m8!3m7!1s0x464ff360bc6a23f7:0x2ec473fbb04a8e67!8m2!3d57.70914!4d11.9851665!9m1!1b1!16s%2Fg%2F11h60hyrlg!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D",
+      link: "https://www.google.com/maps/place/Ekologisk+Fris%C3%B6r+G%C3%B6teborg+-+Igho+Godwin/@57.70914,11.9825916,574m/data=!3m1!1e3!4m8!3m7!1s0x464ff360bc6a23f7:0x2ec473fbb04a8e67!8m2!3d57.70914!4d11.9851665!9m1!1b1!16s%2Fg%2F11h60hyrlg?entry=ttu&g_ep=EgoyMDI2MTEwMi4wIKXMDSoASAFQAw%3D%3D",
       author: "— Google Reviews",
     },
   ];
-  function showSlide(index) {
-    const currentReview = reviews[index];
-    const quoteElement = document.querySelector(".testimonial-text");
-    const authorElement = document.querySelector(".testimonial-author");
-
-    if (currentReview.link) {
-      quoteElement.innerHTML = `<a href="${currentReview.link}" target="_blank" rel="noopener noreferrer" class="testimonial-cta-btn">${currentReview.quote}</a>`;
-    } else {
-      quoteElement.textContent = currentReview.quote;
-    }
-
-    if (authorElement) {
-      authorElement.textContent = currentReview.author;
-    }
-  }
-
 
   const quoteEl = document.getElementById("testimonialQuoteText");
   const authorEl = document.getElementById("testimonialAuthorText");
   const buttons = document.querySelectorAll(".testimonial-page-btn");
+
   let currentIndex = 0;
   let isAnimating = false;
 
   // Set initial transition styles
   [quoteEl, authorEl].forEach((el) => {
-    el.style.transition =
-      "transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease";
-    el.style.willChange = "transform, opacity";
+    if (el) {
+      el.style.transition =
+        "transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease";
+      el.style.willChange = "transform, opacity";
+    }
   });
 
+  // Function to display review content
+  function updateReview(index) {
+    const review = reviews[index];
+
+    if (review.link) {
+      quoteEl.innerHTML = `
+        <a
+          href="${review.link}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="testimonial-cta-btn"
+        >
+          ${review.quote}
+        </a>
+      `;
+    } else {
+      quoteEl.textContent = review.quote;
+    }
+
+    authorEl.textContent = review.author;
+  }
+
+  // Slide to another review
   function slideToReview(nextIndex) {
-    if (isAnimating || nextIndex === currentIndex || !reviews[nextIndex])
+    if (
+      isAnimating ||
+      nextIndex === currentIndex ||
+      !reviews[nextIndex] ||
+      !quoteEl ||
+      !authorEl
+    ) {
       return;
+    }
+
     isAnimating = true;
 
-    // Slide out to left if moving forward, right if moving backward
+    // Slide direction
     const direction = nextIndex > currentIndex ? -1 : 1;
 
+    // Slide out
     [quoteEl, authorEl].forEach((el) => {
       el.style.transform = `translateX(${direction * 40}px)`;
       el.style.opacity = "0";
     });
 
     setTimeout(() => {
-      quoteEl.textContent = reviews[nextIndex].quote;
-      authorEl.textContent = reviews[nextIndex].author;
+      // Update review content
+      updateReview(nextIndex);
 
-      // Position incoming review on opposite side instantly
+      // Position incoming review
       [quoteEl, authorEl].forEach((el) => {
         el.style.transition = "none";
         el.style.transform = `translateX(${-direction * 40}px)`;
       });
 
-      // Slide in to center smoothly
+      // Slide in smoothly
       requestAnimationFrame(() => {
         setTimeout(() => {
           [quoteEl, authorEl].forEach((el) => {
             el.style.transition =
               "transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.35s ease";
+
             el.style.transform = "translateX(0)";
             el.style.opacity = "1";
           });
 
+          // Update active navigation button
           buttons[currentIndex]?.classList.remove("active");
           buttons[nextIndex]?.classList.add("active");
+
           currentIndex = nextIndex;
           isAnimating = false;
         }, 20);
       });
     }, 350);
   }
+
+  // Initialize first review
+  if (reviews.length > 0 && quoteEl && authorEl) {
+    updateReview(0);
+    buttons[0]?.classList.add("active");
+  }
+
+  // Navigation button clicks
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      slideToReview(index);
+    });
+  });
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
