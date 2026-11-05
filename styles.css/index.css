@@ -1346,7 +1346,6 @@ body {
 }
 
 .testimonial-cta-btn:hover {
-  background-color: var(--btn-hover, #38453d);
   opacity: 0.9;
 }
 
