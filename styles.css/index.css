@@ -579,7 +579,7 @@ header.scrolled,
 .subtitle {
   font-family: Arial, sans-serif;
   font-size: 20px;
-  letter-spacing: 12px;
+  letter-spacing: 10px;
   color: #1c3020;
   margin: 0 0 5px;
   font-weight: 400;
@@ -606,7 +606,6 @@ header.scrolled,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 3rem;
 }
 
 .info-body-copy {
