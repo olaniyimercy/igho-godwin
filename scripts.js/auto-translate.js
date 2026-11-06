@@ -54,7 +54,6 @@ function googleTranslateElementInit() {
   });
 
   function getStoredLanguage() {
-    // return localStorage.getItem("preferred_lang") === "sv" ? "sv" : "en";
     return localStorage.getItem("preferred_lang") || "sv";
 
   }
