@@ -773,6 +773,10 @@ header.scrolled,
     font-size: 34px;
   }
 
+  .info-headline h1 {
+    text-align: center;
+  }
+
   .info-btn {
     font-size: 15px;
     font-weight: 500;
