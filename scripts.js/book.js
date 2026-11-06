@@ -35,6 +35,8 @@ const salonServices = [
     price: 599,
     description: "A precise clipper cut for a clean, well-maintained finish.",
     category: "haircuts",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/harklippningsmaskin-1304765?ss=1304765&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_EZleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Scissor_Haircut",
@@ -43,6 +45,8 @@ const salonServices = [
     price: 699,
     description: "For short to medium - length hair.",
     category: "haircuts",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/saxklippning-1304764?ss=1304764&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_YZleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Long_Haircut",
@@ -52,6 +56,8 @@ const salonServices = [
     description:
       "For longer, thicker or more time-intensive hair. Final price depends on the work required",
     category: "haircuts",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/lang-och-tjock-frisyr-1303521?ss=1303521&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_f1leHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Haircut_Beard_Trim",
@@ -61,6 +67,8 @@ const salonServices = [
     description:
       "A precision haircut and beard trim for a clean, balanced look.",
     category: "haircuts",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/harklippning-och-skaggtrimning-1304781?ss=1304781&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_lRleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Wash_Blow-dry",
@@ -70,6 +78,8 @@ const salonServices = [
     description:
       "A refreshing wash and professional blow-dry for smooth, beautifully styled hair.",
     category: "haircuts",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/tvatta-och-fona-1304784?ss=1304784&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_o9leHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Hydration_Conditioning_Treatment",
@@ -79,6 +89,8 @@ const salonServices = [
     description:
       "For dry, dull or difficult-to-manage hair. This treatment helps improve softness, smoothness and moisture, leaving the hair feeling more manageable and easier to style.",
     category: "treatments",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/aterfuktande-och-konditionerande-behandling-1413939?ss=1413939&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_spleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Protein_Strengthening_Treatment",
@@ -88,6 +100,8 @@ const salonServices = [
     description:
       "For weak, fragile or damaged hair. This treatment helps improve hair strength, resilience and manageability, supporting hair that is prone to breakage.",
     category: "treatments",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/protein-och-starkande-behandling-3550445?ss=3550445&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_wVleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
   {
     id: "srv_Scalp Detox & Cleansing_Treatment",
@@ -97,6 +111,8 @@ const salonServices = [
     description:
       "For an oily scalp or a buildup of sweat, excess oil and styling products. This treatment deeply cleanses the scalp, helping it feel fresher, cleaner and more comfortable.",
     category: "treatments",
+    bookingLink:
+      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/harbottenavgiftning-och-rengoringsbehandling-3550449?ss=3550449&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_4pleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
 ];
 
@@ -155,7 +171,7 @@ function renderView() {
   class="add-service-btn"
   data-id="${service.id}"
   title="Book"
-  onclick="window.open('https://ighogodwinsalong.bokadirekt.se/', '_blank', 'noopener,noreferrer')">
+  onclick="window.open('${service.bookingLink}', '_blank', 'noopener,noreferrer')">
   Book
 </button>
             </div>
@@ -165,13 +181,6 @@ function renderView() {
 
     groupDiv.innerHTML = html;
     sectionsContainer.appendChild(groupDiv);
-  });
-
-  // Attach event listeners to all '+' buttons
-  sectionsContainer.querySelectorAll(".add-service-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      toggleCart(btn.getAttribute("data-id"));
-    });
   });
 }
 
