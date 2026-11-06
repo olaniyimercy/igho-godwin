@@ -7,6 +7,16 @@ function googleTranslateElementInit() {
     },
     "google_translate_element",
   );
+
+  // Apply Swedish after Google Translate initializes
+  setTimeout(() => {
+    const selectEl = document.querySelector(".goog-te-combo");
+
+    if (selectEl) {
+      selectEl.value = "sv";
+      selectEl.dispatchEvent(new Event("change"));
+    }
+  }, 1000);
 }
 
 (function () {
@@ -54,8 +64,16 @@ function googleTranslateElementInit() {
   });
 
   function getStoredLanguage() {
-    return localStorage.getItem("preferred_lang") || "sv";
+    const initialized = localStorage.getItem("language_preference_initialized");
 
+    // Set Swedish as the default for existing and new visitors once
+    if (!initialized) {
+      localStorage.setItem("preferred_lang", "sv");
+      localStorage.setItem("language_preference_initialized", "true");
+      return "sv";
+    }
+
+    return localStorage.getItem("preferred_lang") || "sv";
   }
 
   function setTranslateCookie(langCode) {
