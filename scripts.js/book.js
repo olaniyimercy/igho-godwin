@@ -12,18 +12,18 @@ const categoryDefinitions = [
         </div>
       `,
   },
-  {
-    id: "treatments",
-    title: "Hair & Scalp Treatments",
-    headerHtml: `
-        <div class="category-intro-banner">
-          <h3>Hair &amp; Scalp Treatments</h3>
-          <div class="tagline">We do not destroy. We maintain.</div>
-          <p>Specialist rituals designed to nourish from the root up. Using a sustainable, Organic approach. Restore scalp health, balance, and natural hair shine.</p>
-          <p>Hair washing, relaxing head &amp; neck massage, blow-drying are included with every treatment.</p>
-        </div>
-      `,
-  },
+  // {
+  //   id: "treatments",
+  //   title: "Hair & Scalp Treatments",
+  //   headerHtml: `
+  //       <div class="category-intro-banner">
+  //         <h3>Hair &amp; Scalp Treatments</h3>
+  //         <div class="tagline">We do not destroy. We maintain.</div>
+  //         <p>Specialist rituals designed to nourish from the root up. Using a sustainable, Organic approach. Restore scalp health, balance, and natural hair shine.</p>
+  //         <p>Hair washing, relaxing head &amp; neck massage, blow-drying are included with every treatment.</p>
+  //       </div>
+  //     `,
+  // },
 ];
 
 // 2. Service Items Database
@@ -81,39 +81,39 @@ const salonServices = [
     bookingLink:
       "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/tvatta-och-fona-1304784?ss=1304784&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_o9leHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
   },
-  {
-    id: "srv_Hydration_Conditioning_Treatment",
-    name: "Hydration & Conditioning Treatment",
-    duration: "90 mins",
-    price: 1390,
-    description:
-      "For dry, dull or difficult-to-manage hair. This treatment helps improve softness, smoothness and moisture, leaving the hair feeling more manageable and easier to style.",
-    category: "treatments",
-    bookingLink:
-      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/aterfuktande-och-konditionerande-behandling-1413939?ss=1413939&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_spleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
-  },
-  {
-    id: "srv_Protein_Strengthening_Treatment",
-    name: "Protein & Strengthening Treatment",
-    duration: "90 mins",
-    price: 1490,
-    description:
-      "For weak, fragile or damaged hair. This treatment helps improve hair strength, resilience and manageability, supporting hair that is prone to breakage.",
-    category: "treatments",
-    bookingLink:
-      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/protein-och-starkande-behandling-3550445?ss=3550445&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_wVleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
-  },
-  {
-    id: "srv_Scalp Detox & Cleansing_Treatment",
-    name: "Scalp Detox & Cleansing Treatment",
-    duration: "90 mins",
-    price: 1590,
-    description:
-      "For an oily scalp or a buildup of sweat, excess oil and styling products. This treatment deeply cleanses the scalp, helping it feel fresher, cleaner and more comfortable.",
-    category: "treatments",
-    bookingLink:
-      "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/harbottenavgiftning-och-rengoringsbehandling-3550449?ss=3550449&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_4pleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
-  },
+  // {
+  //   id: "srv_Hydration_Conditioning_Treatment",
+  //   name: "Hydration & Conditioning Treatment",
+  //   duration: "90 mins",
+  //   price: 1390,
+  //   description:
+  //     "For dry, dull or difficult-to-manage hair. This treatment helps improve softness, smoothness and moisture, leaving the hair feeling more manageable and easier to style.",
+  //   category: "treatments",
+  //   bookingLink:
+  //     "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/aterfuktande-och-konditionerande-behandling-1413939?ss=1413939&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_spleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
+  // },
+  // {
+  //   id: "srv_Protein_Strengthening_Treatment",
+  //   name: "Protein & Strengthening Treatment",
+  //   duration: "90 mins",
+  //   price: 1490,
+  //   description:
+  //     "For weak, fragile or damaged hair. This treatment helps improve hair strength, resilience and manageability, supporting hair that is prone to breakage.",
+  //   category: "treatments",
+  //   bookingLink:
+  //     "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/protein-och-starkande-behandling-3550445?ss=3550445&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_wVleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
+  // },
+  // {
+  //   id: "srv_Scalp Detox & Cleansing_Treatment",
+  //   name: "Scalp Detox & Cleansing Treatment",
+  //   duration: "90 mins",
+  //   price: 1590,
+  //   description:
+  //     "For an oily scalp or a buildup of sweat, excess oil and styling products. This treatment deeply cleanses the scalp, helping it feel fresher, cleaner and more comfortable.",
+  //   category: "treatments",
+  //   bookingLink:
+  //     "https://www.bokadirekt.se/boka-tjanst/igho-godwin-38420/harbottenavgiftning-och-rengoringsbehandling-3550449?ss=3550449&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZnRzaAVa_4pleHRuA2FlbQIxMQBwZG9mAmZkaWQWURvzA0Jt7hXVCQvnHciOKbbAseaiMXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9YeNQHr5jcFFquqqfzg781YNZ49RziC5FeynBYc5V99WcMZln0JZiB6qEQZ_aem_yAFVHe4tgKqqZtsy2YwvzA",
+  // },
 ];
 
 // State
