@@ -1,0 +1,23 @@
+{
+  "name": "igho-godwin",
+  "version": "1.0.0",
+  "description": "Hair & Scalp Wellness Specialist Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olaniyimercy/igho-godwin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olaniyimercy/igho-godwin/issues"
+  },
+  "homepage": "https://github.com/olaniyimercy/igho-godwin#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
