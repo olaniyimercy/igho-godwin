@@ -177,6 +177,7 @@ body {
   max-height: 380px;
   object-fit: cover;
   display: block;
+  background-color: #38453d;
 }
 
 /* =========================================================
@@ -208,6 +209,8 @@ body {
   max-height: 380px;
   object-fit: cover;
   display: block;
+  background-color: #38453d;
+  color: #38453d;
 }
 
 /* =========================================================
@@ -229,6 +232,8 @@ body {
   max-height: 380px;
   object-fit: cover;
   display: block;
+  background-color: #38453d;
+  color: #38453d;
 }
 
 #section-mindful .text-col {
@@ -267,6 +272,8 @@ body {
   max-height: 380px;
   object-fit: cover;
   display: block;
+  background-color: #38453d;
+  color: #38453d;
 }
 
 /* =========================================================
@@ -288,6 +295,8 @@ body {
   max-height: 380px;
   object-fit: cover;
   display: block;
+  background-color: #38453d;
+  color: #38453d;
 }
 
 #section-natural-care .text-col {
